@@ -36,7 +36,7 @@ class ExaminationSpecialty extends Component {
     render() {
         let { dataSpecialty } = this.state;
         let {language} = this.props
-        console.log(this.state)
+        
         return (
             <div className="examination-container">
                 <HomeHeader />

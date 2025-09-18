@@ -68,10 +68,10 @@ class ManageHandBook extends Component {
             });
         } else {
             toast.error('Something wrong...');
-            console.log('trkhai check error: ', res);
+            
         }
 
-        console.log("khai check state gửi lên: ", data);
+        
     };
     handleOnChangeInput = (event, id) => {
         let stateCopy = { ...this.state };

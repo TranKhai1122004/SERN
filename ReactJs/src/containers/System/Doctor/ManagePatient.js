@@ -90,7 +90,7 @@ class ManagePatient extends Component {
         }
         else {
             toast.error('Something wrongs...')
-            console.log('Error send remedy: ', res);
+           
         }
         this.closeRemedyModal();
     }
@@ -98,7 +98,7 @@ class ManagePatient extends Component {
         let { dataPatient, isOpenRemedyModal, dataModal } = this.state;
         let { language } = this.props;
 
-        console.log("Khaiii: ", this.state);
+       
 
         return (
             <>

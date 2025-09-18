@@ -33,7 +33,7 @@ class Login extends Component {
         this.setState({ errMessage: '' });
         try {
             const data = await handleLoginApi(this.state.username, this.state.password);
-            console.log("Respones: ", data);
+            
             if (data && data.errCode !== 0) {
                 this.setState({
                     errMessage: data.message
@@ -41,7 +41,7 @@ class Login extends Component {
             }
             if (data && data.errCode === 0) {
                 this.props.userLoginSuccess(data.user);
-                console.log("Login successful!");
+                
             }
 
         }

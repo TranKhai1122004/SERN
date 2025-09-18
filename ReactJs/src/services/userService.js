@@ -11,7 +11,7 @@ const getAllUsers = (inputId) => {
     return axios.get(`/api/get-all-users?id=${inputId}`);
 }
 const createNewUserService = (data) => {
-    console.log('check data from service: ', data)
+    
     return axios.post('/api/create-new-user', data);
 }
 
@@ -77,6 +77,9 @@ const getAllSpecialty = () => {
 const getDetailSpecialtyById = (data) => {
     return axios.get(`/api/get-detail-specialty-by-id?id=${data.id}&location=${data.location}`)
 }
+const getDetailSpecialtyByName=(data)=>{
+    return axios.get(`/api/get-detail-specialty-by-name?nameVi=${data}`)
+}
 const getAllHandBook = () => {
     return axios.get(`/api/get-handbook`)
 }
@@ -134,5 +137,6 @@ export {
     getDetailClinicById,
     getAllPatientForDoctor,
     postSendRemedy,
-    postChatbotMessage
+    postChatbotMessage,
+    getDetailSpecialtyByName
 };
