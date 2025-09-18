@@ -107,7 +107,7 @@ class DetailSpecialty extends Component {
     render() {
         let { arrDoctorId, dataDetailSpecialty, listProvince } = this.state;
         let { language } = this.props;
-        console.log("xem ảnh: ", this.state)
+        
         return (
             <div className='detail-specialty-container'>
                 <HomeHeader />

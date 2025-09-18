@@ -9,7 +9,8 @@
         "fee": "Checkup package",
         "check-health": "General health check",
         "support": "Support",
-        "welcome": "Welcome, "
+        "welcome": "Welcome, ",
+        "find-speciality": "Search for a specialty"
     },
     "banner": {
         "title1": "MEDICAL PLATFORM",

@@ -2,13 +2,20 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './HomeHeader.scss';
 import logo from '../../assets/logo.svg';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, injectIntl } from 'react-intl';
 import { LANGUAGES } from "../../utils";
 import { changeLanguageApp } from '../../store/actions/appActions';
 import { withRouter } from 'react-router';
 import Chatbot from '../../components/ChatBot/ChatBot';
-class HomeHeader extends Component {
+import { getDetailSpecialtyByName } from '../../services/userService';
 
+class HomeHeader extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            keyword: ''
+        }
+    }
     changeLanguage = (language) => {
         this.props.changeLanguageAppRedux(language);
     }
@@ -17,6 +24,19 @@ class HomeHeader extends Component {
             this.props.history.push(`/home`);
         }
     }
+
+    handleSearch = async () => {
+        if (!this.state.keyword) return;
+        let res = await getDetailSpecialtyByName(this.state.keyword.toLowerCase().trim());
+        if (res && res.errCode === 0 && res.data) {
+            let specialtyId = res.data.id;
+            this.props.history.push(`/detail-specialty/${specialtyId}`);
+        } else {
+            alert("❌ Không tìm thấy chuyên khoa");
+        }
+
+    }
+
     render() {
         let language = this.props.language;
 
@@ -63,8 +83,17 @@ class HomeHeader extends Component {
                             <div className='title1'><FormattedMessage id="banner.title1" /></div>
                             <div className='title2'><FormattedMessage id="banner.title2" /></div>
                             <div className='search'>
-                                <i className='fas fa-search'></i>
-                                <input type='text' placeholder='Tìm chuyên khoa khám bệnh' />
+                                <i
+                                    className='fas fa-search'
+                                    onClick={this.handleSearch}
+                                ></i>
+                                <input
+                                    type='text'
+                                    placeholder={this.props.intl.formatMessage({ id: "homeheader.find-speciality" })}
+                                    value={this.state.keyword}
+                                    onChange={(e) => this.setState({ keyword: e.target.value })}
+                                    onKeyDown={(e) => e.key === 'Enter' && this.handleSearch()}
+                                />
                             </div>
                         </div>
                         <div className='content-down'>
@@ -118,4 +147,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(HomeHeader));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(injectIntl(HomeHeader)));

@@ -83,7 +83,7 @@ class ManageClinic extends Component {
             });
         } else {
             toast.error('Something wrong...');
-            console.log('trkhai check error: ', res);
+            
         }
 
 

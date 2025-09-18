@@ -104,7 +104,7 @@ class DoctorSchedule extends Component {
                     allAvalableTime: res.data ? res.data : []
                 })
             }
-            console.log("trkhai: ", res)
+            
         }
     }
     handleClickScheduleTime = (time) => {
@@ -112,7 +112,7 @@ class DoctorSchedule extends Component {
             isOpenModalBooking: true,
             dataScheduleTimeModal: time
         })
-        console.log("Khai check time: ", time)
+        
     }
     closeBookingModal = () => {
         this.setState({

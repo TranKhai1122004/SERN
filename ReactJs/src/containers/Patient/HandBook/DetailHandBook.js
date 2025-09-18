@@ -21,14 +21,14 @@ class DetailHandBook extends Component {
                     detailHandBook: res.data
                 })
             }
-            console.log(res)
+            
         }
     }
 
     render() {
         let { detailHandBook } = this.state;
 
-        console.log(detailHandBook);
+        
         return (
             <>
 

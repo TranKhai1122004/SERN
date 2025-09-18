@@ -65,7 +65,7 @@ class UserManage extends Component {
     }
 
     handlDeleteUser = async (user) => {
-        console.log('click delete', user);
+        
         try {
             let res = await deleteUserService(user.id);
             if (res && res.errCode === 0) {
@@ -79,7 +79,7 @@ class UserManage extends Component {
     }
 
     handleEditUser = (user) => {
-        console.log('check edit user', user);
+        
         this.setState({
             isOpenModalEditUser: true,
             userEdit: user
@@ -102,7 +102,7 @@ class UserManage extends Component {
         }
     }
     render() {
-        console.log('check render', this.state);
+        
         let arrUsers = this.state.arrUsers;
         return (
             <div className="users-container">

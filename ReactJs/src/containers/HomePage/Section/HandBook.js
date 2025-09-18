@@ -37,7 +37,7 @@ class HandBook extends Component {
     }
     async componentDidMount() {
         let res = await getAllHandBook();
-        console.log("trkhai: ", res)
+        
         if (res && res.errCode === 0) {
             this.setState({
                 dataHandBook: res.data ? res.data : []
