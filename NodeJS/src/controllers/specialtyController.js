@@ -1,6 +1,6 @@
 const specialtyService = require("../services/specialtyService");
 
-let createSpecialty = async(req, res) => {
+let createSpecialty = async (req, res) => {
     try {
         let infor = await specialtyService.createSpecialty(req.body);
         return res.status(200).json(infor)
@@ -12,8 +12,8 @@ let createSpecialty = async(req, res) => {
         })
     }
 }
-let getAllSpecialty = async(req, res) => {
-       try {
+let getAllSpecialty = async (req, res) => {
+    try {
         let infor = await specialtyService.getAllSpecialty();
         return res.status(200).json(infor)
     } catch (e) {
@@ -24,9 +24,21 @@ let getAllSpecialty = async(req, res) => {
         })
     }
 }
-let getDetailSpecialtyById = async(req, res) => {
-     try {
+let getDetailSpecialtyById = async (req, res) => {
+    try {
         let infor = await specialtyService.getDetailSpecialtyById(req.query.id, req.query.location);
+        return res.status(200).json(infor)
+    } catch (e) {
+        console.log(e);
+        return res.status(200).json({
+            errCode: -1,
+            errMessage: 'Error from the server'
+        })
+    }
+}
+let getDetailSpecialtyByName = async (req, res) => {
+    try {
+        let infor = await specialtyService.getDetailSpecialtyByName(req.query.nameVi);
         return res.status(200).json(infor)
     } catch (e) {
         console.log(e);
@@ -39,5 +51,6 @@ let getDetailSpecialtyById = async(req, res) => {
 module.exports = {
     createSpecialty: createSpecialty,
     getAllSpecialty: getAllSpecialty,
-    getDetailSpecialtyById: getDetailSpecialtyById
+    getDetailSpecialtyById: getDetailSpecialtyById,
+    getDetailSpecialtyByName: getDetailSpecialtyByName
 }

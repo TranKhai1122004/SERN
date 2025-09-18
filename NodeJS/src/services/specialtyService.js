@@ -1,6 +1,7 @@
 const { reject } = require("lodash");
-import { where } from "sequelize";
+import { where,  Op, fn, col } from "sequelize";
 import db from "../models/index";
+
 let createSpecialty = (data) => {
     return new Promise(async (resolve, reject) => {
         try {
@@ -117,9 +118,40 @@ let getDetailSpecialtyById = (inputId, location) => {
         }
     })
 }
+let getDetailSpecialtyByName = (inputName) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            if (!inputName) {
+                return resolve({
+                    errCode: 1,
+                    errMessage: "Missing required parameter"
+                });
+            } else {
+                let data = await db.Specialty.findOne({
+                    where: where(
+                        fn("LOWER", col("nameVi")),   // ép cột về lowercase
+                        inputName.toLowerCase()       // ép input về lowercase
+                    ),
+                    attributes: ['contentHTMLVi', 'contentMarkdownVi', 'contentHTMLEn', 'contentMarkdownEn', 'image', "id"]
 
+                })
+                if (data && data.image) {
+                    data.image = new Buffer(data.image, 'base64').toString('binary');
+                }
+                resolve({
+                    errCode: 0,
+                    errMessage: '',
+                    data
+                })
+            }
+        } catch (e) {
+            reject(e);
+        }
+    })
+}
 module.exports = {
     createSpecialty: createSpecialty,
     getAllSpecialty: getAllSpecialty,
-    getDetailSpecialtyById: getDetailSpecialtyById
+    getDetailSpecialtyById: getDetailSpecialtyById,
+    getDetailSpecialtyByName: getDetailSpecialtyByName
 }
