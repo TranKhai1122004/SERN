@@ -1,6 +1,5 @@
 .slick-prev {
    
-    // position: relative !important;
     left: -10 !important;
     z-index: 1000 !important;
     height: 48px !important;
@@ -18,8 +17,8 @@
     font-family: FontAwesome !important;
     color: red !important;
     display: flex !important;
-            justify-content: center; // căn giữa slider item
-    // content: "\e257" !important;
+    justify-content: center; 
+    
 }
 
 .slick-next {
@@ -75,7 +74,7 @@
             .bg-image {
 
                 &.section-specialty {
-                    // background: url("../../assets/specialty/co-xuong-khop.jpg");
+                    
                     width: 278px;
                     height: 150px;
                     background-position: center center;
@@ -89,7 +88,7 @@
                 }
 
                 &.section-medical-facility {
-                    // background: url('../../assets/medical-facility/benh-vien-da-khoa-quoc-te-thu-cuc.jpg');
+                    
                     width: 278px;
                     height: 150px;
                     background-position: center center;
@@ -123,7 +122,7 @@
                 }
 
                 &.section-handbook {
-                    // background: url('../../assets/handbook/kham-benh-nguoi-gia.jpg');
+                    
                     width: 278px;
                     height: 150px;
                     background-position: center center;
@@ -140,225 +139,7 @@
 
         }
 
-        .section-customize2 {
-            .bg-child {
-                font-weight: bold !important;
-            }
 
-            .bg-image {
-                
-
-                &.section-medical-facility {
-                    background: url('../../assets/medical-facility/khoa-xuong-khop-benh-vien-viet-duc-649510.jpg');
-                    width: 278px;
-                    height: 150px;
-                    background-position: center center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-color: #eee;
-                    margin: 0 auto;
-                    border-radius: 5%;
-                }
-
-           
-
-               
-            }
-        }
-
-        .section-customize3 {
-            .bg-child {
-                font-weight: bold !important;
-            }
-
-            .bg-image {
-
-
-                &.section-specialty {
-                    background: url("../../assets/specialty/kham-tieu-hoa-la-kham-nhung-gi.jpg");
-                    width: 278px;
-                    height: 150px;
-                    background-position: center center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-color: #eee;
-                    margin: 0 auto;
-                    border-radius: 5%;
-                }
-
-                &.section-medical-facility {
-                    background: url('../../assets/medical-facility/benh-vien-cho-ray.jpg');
-                    width: 278px;
-                    height: 150px;
-                    background-position: center center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-color: #eee;
-                    margin: 0 auto;
-                    border-radius: 5%;
-                }
-
-                &.section-outstanding-doctor {
-                    background: url('../../assets/out-standing/143035-drtranthimaithy400x400.jpg');
-                    width: 278px;
-                    height: 150px;
-                    background-position: center center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-color: #eee;
-                    margin: 0 auto;
-                    border-radius: 30%;
-
-                }
-
-              
-            }
-
-        }
-
-        .section-customize4 {
-            .bg-child {
-                font-weight: bold !important;
-            }
-
-            .bg-image {
-
-
-                &.section-specialty {
-                    background: url("../../assets/specialty/chuyen-khoa-tim-mach.jpg");
-                    width: 278px;
-                    height: 150px;
-                    background-position: center center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-color: #eee;
-                    margin: 0 auto;
-                    border-radius: 5%;
-                }
-
-                &.section-medical-facility {
-                    background: url('../../assets/medical-facility/benh-vien-ung-uong-hung-viet-ha-noi-ivie-bac-si-oi_bc6b6189_ba80_4733_b705_b63df3708530.jpg');
-                    width: 278px;
-                    height: 150px;
-                    background-position: center center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-color: #eee;
-                    margin: 0 auto;
-                    border-radius: 5%;
-                }
-
-
-                &.section-outstanding-doctor {
-                    background: url('../../assets/out-standing/111557-bs-trinh-thi-khanh.jpg');
-                    width: 278px;
-                    height: 150px;
-                    background-position: center center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-color: #eee;
-                    margin: 0 auto;
-                    border-radius: 30%;
-                }
-
-            
-            }
-        }
-
-        .section-customize5 {
-            .bg-child {
-                font-weight: bold !important;
-            }
-
-            .bg-image {
-
-
-                &.section-specialty {
-                    background: url("../../assets/specialty/tai-mui-hong.jpg");
-                    width: 278px;
-                    height: 150px;
-                    background-position: center center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-color: #eee;
-                    margin: 0 auto;
-                    border-radius: 5%;
-                }
-
-                &.section-medical-facility {
-                    background: url('../../assets/medical-facility/image003-7878.jpg');
-                    width: 278px;
-                    height: 150px;
-                    background-position: center center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-color: #eee;
-                    margin: 0 auto;
-                    border-radius: 5%;
-                }
-
-                &.section-outstanding-doctor {
-                    background: url('../../assets/out-standing/162154-ts-le-duc-to.jpg');
-                    width: 278px;
-                    height: 150px;
-                    background-position: center center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-color: #eee;
-                    margin: 0 auto;
-                    border-radius: 30%;
-                }
-
-              
-            }
-        }
-
-        .section-customize6 {
-            .bg-child {
-                font-weight: bold !important;
-            }
-
-            .bg-image {
-
-                &.section-specialty {
-                    background: url("../../assets/specialty/cotsong.jpg");
-                    width: 278px;
-                    height: 150px;
-                    background-position: center center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-color: #eee;
-                    margin: 0 auto;
-                    border-radius: 5%;
-                }
-
-                &.section-medical-facility {
-                    background: url('../../assets/medical-facility/anviet.jpg');
-                    width: 278px;
-                    height: 150px;
-                    background-position: center center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-color: #eee;
-                    margin: 0 auto;
-                    border-radius: 5%;
-                }
-
-                &.section-outstanding-doctor {
-                    background: url('../../assets/out-standing/170344tien-si-bac-si-tran-thu-huong.jpg');
-                    width: 278px;
-                    height: 150px;
-                    background-position: center center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-color: #eee;
-                    margin: 0 auto;
-                    border-radius: 30%;
-                }
-
-             
-            }
-        }
 
     }
 }
