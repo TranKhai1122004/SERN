@@ -1,0 +1,175 @@
+.doctor-extra-infor-container{
+
+    .doctor-extra-infor-body{
+        .content-up{
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd ;
+            .text-address{
+                text-transform: uppercase;
+                color: #666666;
+                font-weight: 700;
+            }
+            .name-clinic{
+                padding: 5px 0;
+                font-weight: 700;
+                color: #45C3D2;      
+            }
+            .detail-address{
+                font-weight: 200;
+                color: #000000;  
+            }
+        }
+
+
+        .content-mid{
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd ;
+            .title-price{
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                color: #666666;
+                font-weight: 700;
+            }
+            .detail-infor{
+                border:  1px solid #ddd;
+                padding: 5px;
+                background-color: #f8f8f8;
+                .price{
+                    padding-bottom: 5px;
+                    // .left{
+                        
+                    // }
+                    .right{
+                        float: right;
+                        font-weight: 535;
+                        
+                        color: #F39C12;
+                    }
+                }
+
+                // .note{
+
+                // }
+              
+            }
+            .payment{
+                border:  1px solid #ddd;
+                padding: 5px;
+                background-color: #eee;
+                .payment-method {
+                    margin-left: 3px; 
+                    font-weight: 500; 
+                    color: #4A90E2; 
+                }
+
+            }
+            .hide-price{
+                margin-top: 10px;
+                span{
+                    cursor: pointer;
+                    color: #45C3D2;
+                }
+                
+            }
+            .short-infor{
+                .form-group-row {
+                    display: flex;
+                    gap: 3px; 
+                    .short-infor-title{
+                        text-transform: uppercase;
+                        color: #666666;
+                        font-weight: 700;              
+                    }
+                    .short-infor-price{
+                        .currency{
+                            font-weight: 535;
+                            margin: 0 2px;
+                            color: #F39C12;
+                        }
+                    }
+                    .detail-span{
+                         cursor: pointer;
+                        color: #45C3D2;
+                        padding-left: 2px;
+                    }
+                }
+                
+            }
+        }
+
+        .content-down{
+           
+            .insurance{
+                text-transform: uppercase;
+                color: #666666;
+                font-weight: 700;
+            }
+            .insurance-detail{
+                    .insurance-detail-one{
+                        border:  1px solid #ddd ;
+                        padding: 5px;
+                        background-color: #f8f8f8;
+                        .ins-child{   
+                            font-weight: 500;      
+                            color: #000000e0; 
+                        }
+                        .ins-child2{
+                            font-weight: 400;     
+                            color: #999999;       
+
+                        }
+                    }
+                    .insurance-detail-two{
+                        border:  1px solid #ddd;
+                        padding: 5px;
+                        background-color: #eee;
+                        .ins-detail-child1{
+                            font-weight: 500;      
+                            color: #000000e0; 
+                        }
+                        .ins-detail-child2{
+                            font-weight: 400;     
+                            color: #999999;  
+                        }
+                        .ins-detail-child3{
+                            border:  1px solid #ddd;
+                            padding: 5px;
+                            background-color: #cfdee0;
+                            .ins-detail-child-child{
+                                font-weight: 550;      
+                                color: #000000e0;
+                                padding: 10px 0; 
+                            }
+                        }
+                        span{
+                            cursor: pointer;
+                            color: #45C3D2;
+                            padding-left: 2px;
+                        }
+                    }
+                    .hide-insurance{
+                        margin-top: 10px;
+                        span{
+                            cursor: pointer;
+                            color: #45C3D2;
+                        }
+                    }
+            }
+            .insurance-shorten{
+                 .form-group-row {
+                    display: flex;
+                    gap: 3px; 
+                    span{
+                        cursor: pointer;
+                        color: #45C3D2;
+                        padding-left: 2px;
+                    }
+            }
+            }
+             
+
+        }
+    }
+}

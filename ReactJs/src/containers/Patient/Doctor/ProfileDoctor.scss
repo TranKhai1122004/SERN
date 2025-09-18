@@ -1,0 +1,62 @@
+.profile-doctor-container{
+    .intro-doctor {
+        display: flex;
+        .content-left {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-position: center; 
+        }
+
+        .content-right {
+            
+            display: flex;
+            width: calc(100% - 100px);
+            flex-direction: column;
+            padding-left: 10px;
+
+            .up {
+            font-size: 16px;
+            font-weight: 600;
+            }
+
+            .down {
+                text-align: justify;
+                .booking-time{
+                    font-size: 14px;
+                    color: #363636;
+                    margin-top: 4px;
+                    margin-bottom: 8px;
+                    font-weight: 535;
+                    .fr-bking{
+                        color: #363636;
+                    }
+                }
+            }
+        }
+    }
+    .price {
+        margin-top: 10px;
+        margin-bottom: 12px;
+        padding: 4px 10px;
+        border: 1px solid #3db7bb; 
+        border-radius: 6px;
+        background-color: #fdfefe; 
+        font-size: 15px;
+        font-weight: 500;
+        display: inline-block;
+
+        .currency {
+            font-weight: 535;
+            color: #45C3D2; 
+            margin-left: 6px;
+        }
+    }
+
+}
+
+
+
+

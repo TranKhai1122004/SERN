@@ -1,0 +1,170 @@
+.preview-img-container {
+    .label-upload {
+        padding: 5px;
+        border-radius: 3px;
+        background: #ddd;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    .preview-image {
+        height: 60px;
+        width: 100%;
+        border: 1px solid #ddd;
+        background: center center no-repeat;
+        background-size: cover;
+        cursor: pointer;
+        margin-top: 3px;
+
+   
+    }
+
+}
+
+select.form-control {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 16px;
+    padding-right: 30px;
+    /* để tránh chữ đè lên mũi tên */
+}
+
+// select.form-control {
+//     appearance: auto;
+// }
+.label-upload {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background-color: #787878 !important;
+    /* xanh lá đậm */
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+}
+
+.label-upload:hover {
+    background-color: #45a049 !important;
+}
+
+.label-upload i {
+
+    font-size: 16px;
+
+}
+
+.avatar {
+    margin-top: 2px;
+}
+
+/* 1. ẢNH NỀN TOÀN TRANG */
+.background-image-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../assets/images/1192125.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -9999;
+}
+
+/* 2. OVERLAY MỜ TRÊN ẢNH NỀN (giúp dễ đọc nội dung) */
+.background-image-layer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    /* lớp phủ trắng mờ */
+}
+
+/* 3. CONTAINER CHÍNH KHÔNG NỀN ĐỤC */
+.user-redux-container {
+    background-color: transparent !important;
+    position: relative;
+    z-index: 1;
+
+}
+
+/* 4. PHẦN NỘI DUNG FORM */
+.user-redux-body .container {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* trắng mờ */
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1;
+    position: relative;
+}
+
+/* 5. INPUT / SELECT MỀM MÀU */
+.form-control {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    color: #000;
+}
+
+/* 6. BẢNG DỮ LIỆU TRONG SUỐT NHẸ */
+table {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+table th,
+table td {
+    background-color: transparent !important;
+    color: #000 !important;
+}
+
+/* 7. CÁC BUTTON (nếu muốn nổi bật hơn) */
+.btn {
+    z-index: 2;
+    position: relative;
+}
+
+
+
+
+.preview-image {
+    width: 100%;
+    height: 150px;
+    border: 2px solid #b0b0b0 !important;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.4);
+    /* ✅ nền mờ */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    /* đổ bóng nhẹ */
+    transition: all 0.3s ease;
+}
+
+.preview-image:hover {
+    filter: brightness(1.05);
+    transform: scale(1.01);
+}
+
+// .manage-user.add {
+//     color: red !important;  /* Màu đen đậm hoàn toàn */
+//     font-weight: bold;
+// }

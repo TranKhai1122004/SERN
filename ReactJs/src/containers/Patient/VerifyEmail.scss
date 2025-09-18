@@ -1,0 +1,32 @@
+.verify-email-container{
+    background-image: url('../../assets/images/hinh-nen-may-tinh-4k-don-gian-ma-dep-chill.jpg');
+    position: relative; /* bỏ fixed */
+    min-height: 100vh;  /* để cover toàn màn */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;                
+    align-items: center;
+    justify-content: center;
+    
+    .verify-email-body{
+        max-width: 600px;
+        padding: 30px 40px;
+        border-radius: 16px;
+
+        background: rgba(0, 0, 0, 0.55); 
+        backdrop-filter: blur(6px);      
+        text-align: center;
+        .text {
+            font-size: 28px;
+            font-weight: 600;
+            color: #f8f9fa;               
+            line-height: 1.6;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+            cursor: default;
+        }
+        
+    }
+}

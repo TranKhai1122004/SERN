@@ -1,0 +1,93 @@
+.background-image-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../assets/images/1192125.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -9999;
+}
+
+
+.background-image-layer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    
+}
+
+.manage-specialty-container {
+    background-color: transparent !important;
+    position: relative;
+    z-index: 1;
+
+    .manage-specialty-title {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 15px;
+        color: #0071ba;
+    }
+
+     .manage-specialty-body .container {
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 20px;
+        border-radius: 8px;
+        z-index: 1;
+        position: relative;
+        .add-new-speacialty{
+            .custom-file-upload{
+                padding-top: 2px;            
+                cursor: pointer;
+                transition: 0.2s;
+
+                &:hover {
+                    background: rgba(255, 255, 255, 0.15);
+                }
+                .preview-image {
+                    margin-top: 4px;
+                    height: 56px;
+                    width: 100%;
+                    border: 1px solid #575656;
+                    border-radius: 5px;
+                    background: center center no-repeat;
+                    background-size: cover;
+                    cursor: pointer;
+                }         
+            }
+        }
+    }
+    .btn-add-new-specialty{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        outline: none;
+        border: none;
+        padding: 5px;
+        background: rgb(11, 124, 216);
+        color: white;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.9;
+            }
+    }
+
+    .manage-specialty-editor{
+        .markdownVi{
+            margin-top: 10px;
+        }
+        .markdownEn{
+            margin-top: 10px;
+        }
+    }
+}

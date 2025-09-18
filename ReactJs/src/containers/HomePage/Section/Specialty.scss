@@ -1,0 +1,14 @@
+.section-share {
+    .section-container{
+        .section-body{
+            .text-specialty{
+                font-size: 17px;
+                font-weight: bold;
+                cursor: pointer;
+                &:hover{
+                    color: #28a745;
+                }
+            }
+        }
+    }
+}

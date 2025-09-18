@@ -1,0 +1,227 @@
+{
+    "homeheader": {
+        "speciality": "Medical specialty",
+        "searchdoctor": "Find a doctor by specialty",
+        "health-facility": "Health facilities",
+        "select-room": "Choose hospital clinic",
+        "doctor": "Doctor",
+        "select-doctor": "Choose a good doctor",
+        "fee": "Checkup package",
+        "check-health": "General health check",
+        "support": "Support",
+        "welcome": "Welcome, "
+    },
+    "banner": {
+        "title1": "MEDICAL PLATFORM",
+        "title2": "COMPREHENSIVE HEALTH CARE",
+        "child1": "Specialist examination",
+        "child2": "Remote examination",
+        "child3": "General examination",
+        "child4": "Medical test",
+        "child5": "Mental health",
+        "child6": "Dental checkup"
+    },
+    "menu": {
+        "admin": {
+            "manage-user": "User System",
+            "manage-doctor": "Manage doctor",
+            "manage-admin": "Manage admin",
+            "crud": "CRUD user",
+            "crud-redux": "CRUD Redux",
+            "clinic": "Clinics",
+            "manage-clinic": "Manage clinic",
+            "specialty": "Specialty",
+            "manage-specialty": "Manage specialty",
+            "handbook": "Handbook",
+            "manage-handbook": "Manage handbook"
+        },
+        "doctor": {
+            "manage-schedule": "Manage Doctor's schedule",
+            "manage-patient": "Manage Doctor's patient",
+            "choose-date": "Choose date"
+        }
+    },
+    "manage-user": {
+        "add": "Add a new user",
+        "email": "Email",
+        "password": "Password",
+        "first-name": "First name",
+        "last-name": "Last name",
+        "phone-number": "Phone number",
+        "address": "Address",
+        "gender": "Gender",
+        "position": "Position",
+        "role": "Role",
+        "save": "Save",
+        "image": "Avatar",
+        "edit": "Edit user"
+    },
+    "homepage": {
+        "outstanding-doctor": "Doctor of the Week",
+        "more-info": "More information",
+        "footer": "2024 Tran Khai. For more information, please visit my GitHub."
+    },
+    "manage-schedule": {
+        "title": "Manage doctor's examination plan",
+        "choose-doctor": "Choose doctor",
+        "choose-date": "Choose date",
+        "save": "Save",
+        "medical-appointment": "Medical appointment",
+        "text-response": "The appointment schedule is currently unavailable for this time slot. Please select a different time to proceed!",
+        "choose": "Choose",
+        "book": "and book (Booking fee 0 VND)"
+    },
+    "admin": {
+        "manage-doctor": {
+            "title": "Create Doctor Profile",
+            "select-doctor": "Choose doctor",
+            "select-speciality": "Choose speciality",
+            "select-clinic": "Choose clinic",
+            "intro": "Introduction",
+            "save": "Save",
+            "create-infor": "Add Information",
+            "price": "Price",
+            "payment": "Payment",
+            "province": "Province",
+            "nameClinic": "Clinic's name ",
+            "addressClinic": "Clinic's address ",
+            "note": "Note",
+            "clear": "Clear"
+        }
+    },
+    "patient": {
+        "extra-infor-doctor": {
+            "text-address": "Clinic address",
+            "title-price": "Consultation Fee",
+            "note": "Patients booking via BookingCare will be given priority for consultation. The consultation fee for foreign patients is 30 USD.",
+            "payment": "Patients can make the payment via:",
+            "hide-price": "Hide Pricing",
+            "detail-span": "View Details",
+            "insurance": "Applicable Insurance Type",
+            "insurance-state-title": "National Health Insurance",
+            "insurance-state-desc": "Applicable to patients registered for initial medical examination and treatment at the hospital or with a referral letter from another facility",
+            "insurance-direct-title": "Direct Billing Insurance",
+            "insurance-direct-desc": "For insurances without direct billing: The hospital supports issuing financial invoices (red invoices) and assists patients in completing claim documents",
+            "insurance-direct-listTitle": "LIST OF DIRECT BILLING INSURANCE COMPANIES",
+            "insurance-see-list": "View list",
+            "hide": "Hide",
+            "insurancee": {
+                "title": "APPLICABLE INSURANCE TYPES",
+                "list": {
+                    "1": "Bao Viet Insurance",
+                    "2": "Bao Minh Insurance Corporation",
+                    "3": "PetroVietnam Insurance (PVI)",
+                    "4": "Military Insurance (MIC)",
+                    "5": "INSMART Co., Ltd.",
+                    "6": "PTI Insurance",
+                    "7": "BIDV Insurance (BIC)",
+                    "8": "Global Insurance (GIC)",
+                    "9": "VASS Insurance",
+                    "10": "Liberty Insurance",
+                    "11": "PJICO Insurance",
+                    "12": "Pacific Cross Insurance",
+                    "13": "Generali Life Insurance",
+                    "14": "Dai-ichi Life Insurance",
+                    "15": "AIA Insurance",
+                    "16": "BAKCO Insurance",
+                    "17": "UIC's Insurance",
+                    "18": "VBI Insurance (VietinBank)",
+                    "19": "JLT Insurance",
+                    "20": "ATACC Insurance",
+                    "21": "Marsh Insurance",
+                    "22": "AON Care Insurance",
+                    "23": "FTC Insurance",
+                    "24": "CarePlus Insurance",
+                    "25": "Gras Savoye Insurance",
+                    "26": "Prudential Life Insurance"
+                }
+            }
+        },
+        "manage": {
+            "fullName": "Full Name",
+            "no": "No.",
+            "sex": "Gender",
+            "action": "Status",
+            "time": "Time",
+            "address": "Address",
+            "confirm": "Confirm",
+            "send-invoices": "Send Invoice",
+            "noData": "No data",
+            "send": "Send",
+            "title": "Medical invoice sent successfully",
+            "patient-email": "Patient's email",
+            "prescription-file": "Select prescription file"
+        }
+    },
+    "booking-modal": {
+        "title": {
+            "Booking-information": "Booking Information",
+            "fullName": "Full Name",
+            "phoneNumber": "Phone Number",
+            "emailAddress": "Email Address",
+            "contactAddress": "Contact Address",
+            "reason": "Reason for Visit",
+            "birthDay": "Birthday",
+            "gender": "Gender",
+            "confirm": "Confirm",
+            "cancel": "Cancel"
+        },
+        "profile-doctor": {
+            "free-booking": "Free booking",
+            "more-infor": "More information"
+        },
+        "progress": {
+            "Booking-progress": "Booking in progress..."
+        }
+    },
+    "verify": {
+        "text": {
+            "success1": "Your appointment has been confirmed.",
+            "success2": "Thank you for choosing BookingCare.",
+            "failed": "The appointment does not exist or has already been confirmed.",
+            "loading": "The system is experiencing an issue. Please try again later."
+        }
+    },
+    "specialty": {
+        "manage-speciality": "Specialty Administration",
+        "name-speciality": "Specialty Name",
+        "img-speciality": "Specialty Image",
+        "save": "Save",
+        "common-specialties": "Common specialties",
+        "more-infor": "More information",
+        "common": "Common medical specialties"
+    },
+    "handBook": {
+        "handbook": "Handbook",
+        "moreInfor": "MORE INFORMATION",
+        "manage-handbook": "Manage Handbook",
+        "title-handbook": "Title",
+        "img": "Image",
+        "save": "Save"
+    },
+    "remote": {
+        "text": "This feature is currently unavailable. Please try again later!"
+    },
+    "medical": {
+        "medical-facility": "Outstanding medical facilities"
+    },
+    "generalExamination": {
+        "general_Examination": "Full Medical Check-up"
+    },
+    "remedyModal": {
+        "progress": {
+            "Booking-progress": "Processing..."
+        }
+    },
+    "chatbot": {
+        "chatbot.welcome": "Hello 👋, I am your AI medical assistant. What would you like to ask?",
+        "chatbot.suggestions": "Suggested questions:",
+        "chatbot.send": "Send",
+        "chatbot.placeholder": "Type a message...",
+        "chatbot.suggestion1": "How often should I have a health check-up?",
+        "chatbot.suggestion2": "What should I do if I have a high fever?",
+        "chatbot.suggestion3": "What should people with diabetes eat?",
+        "chatbot.suggestion4": "Do I need a flu shot every year?",
+        "AI": "AI assistant"
+    }
+}

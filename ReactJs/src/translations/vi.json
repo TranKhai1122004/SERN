@@ -1,0 +1,227 @@
+{
+    "homeheader": {
+        "speciality": "Chuyên khoa",
+        "searchdoctor": "Tìm bác sĩ theo chuyên khoa",
+        "health-facility": "Cơ sở y tế",
+        "select-room": "Chọn bệnh viện phòng khám",
+        "doctor": "Bác sĩ",
+        "select-doctor": "Chọn bác sĩ giỏi",
+        "fee": "Gói khám",
+        "check-health": "Khám sức khỏe tổng quát",
+        "support": "Hỗ trợ",
+        "welcome": "Xin chào, "
+    },
+    "banner": {
+        "title1": "NỀN TẢNG Y TẾ",
+        "title2": "CHĂM SÓC SỨC KHỎE TOÀN DIỆN",
+        "child1": "Khám chuyên khoa",
+        "child2": "Khám từ xa",
+        "child3": "Khám tổng quát",
+        "child4": "Xét nghiệm y học",
+        "child5": "Sức khỏe tinh thần",
+        "child6": "Khám nha khoa"
+    },
+    "menu": {
+        "admin": {
+            "manage-user": "Người dùng",
+            "manage-doctor": "Quản lý bác sĩ",
+            "manage-admin": "Quản lý admin",
+            "crud": "CRUD user",
+            "crud-redux": "CRUD Redux",
+            "clinic": "Phòng khám",
+            "manage-clinic": "Quản lý phòng khám",
+            "specialty": "Chuyên khoa",
+            "manage-specialty": "Quản lý chuyên khoa",
+            "handbook": "Cẩm nang",
+            "manage-handbook": "Quản lý cẩm nang"
+        },
+        "doctor": {
+            "manage-schedule": "Quản lý kế hoạch khám bệnh",
+            "manage-patient": "Quản lý bệnh nhân khám bệnh",
+            "choose-date": "Chọn ngày"
+        }
+    },
+    "manage-user": {
+        "add": "Thêm mới người dùng",
+        "email": "Email",
+        "password": "Mật khẩu",
+        "first-name": "Tên",
+        "last-name": "Họ",
+        "phone-number": "Số điện thoại",
+        "address": "Địa chỉ",
+        "gender": "Giới tính",
+        "position": "Chức danh",
+        "role": "Vai trò",
+        "save": "Lưu người dùng",
+        "image": "Ảnh đại diện",
+        "edit": "Lưu thay đổi"
+    },
+    "homepage": {
+        "outstanding-doctor": "Bác sĩ nổi bật tuần qua",
+        "more-info": "Xem thêm",
+        "footer": "2024 Trần Khải. Để biết thêm thông tin, vui lòng truy cập GitHub của tôi."
+    },
+    "manage-schedule": {
+        "title": "Quản lý kế hoạch khám bệnh của bác sĩ",
+        "choose-doctor": "Chọn bác sĩ",
+        "choose-date": "Chọn ngày",
+        "save": "Lưu thông tin",
+        "medical-appointment": "Lịch khám",
+        "text-response": "Lịch hẹn trong khung giờ này hiện không khả dụng. Vui lòng chọn thời gian khác để tiếp tục!",
+        "choose": "Chọn",
+        "book": "và đặt (Phí đặt lịch 0đ)"
+    },
+    "admin": {
+        "manage-doctor": {
+            "title": " Tạo thêm thông tin doctor",
+            "select-doctor": "Chọn bác sĩ",
+            "select-speciality": "Chọn chuyên khoa",
+            "select-clinic": "Chọn phòng khám",
+            "intro": "Thông tin giới thiệu",
+            "save": "Lưu thông tin",
+            "create-infor": "Tạo thông tin",
+            "price": "Giá khám bệnh",
+            "payment": "Phương thức thanh toán",
+            "province": "Tỉnh thành",
+            "nameClinic": "Tên phòng khám",
+            "addressClinic": "Địa chỉ phòng khám",
+            "note": "Ghi chú",
+            "clear": "Thoát"
+        }
+    },
+    "patient": {
+        "extra-infor-doctor": {
+            "text-address": "ĐỊA CHỈ KHÁM",
+            "title-price": "Giá khám",
+            "note": "Được ưu tiên khám trước khi đặt khám qua BookingCare. Giá khám cho người nước ngoài là 30 USD",
+            "payment": "Người bệnh có thể thanh toán chi phí bằng hình thức:",
+            "hide-price": "Ẩn bảng giá",
+            "detail-span": "Xem chi tiết",
+            "insurance": "LOẠI BẢO HIỂM ÁP DỤNG",
+            "insurance-state-title": "Bảo hiểm Y tế nhà nước",
+            "insurance-state-desc": "Áp dụng cho bệnh nhân đăng ký khám chữa bệnh ban đầu tại bệnh viện hoặc có giấy chuyển viện từ đơn vị khác",
+            "insurance-direct-title": "Bảo hiểm bảo lãnh trực tiếp",
+            "insurance-direct-desc": "Đối với các bảo hiểm không bảo lãnh trực tiếp: Bệnh viện hỗ trợ xuất hóa đơn tài chính (hoá đơn đỏ) và hỗ trợ bệnh nhân hoàn thiện hồ sơ",
+            "insurance-direct-listTitle": "DANH SÁCH CÔNG TY BẢO LÃNH",
+            "insurance-see-list": "Xem danh sách",
+            "hide": "Thu gọn",
+            "insurancee": {
+                "title": "LOẠI BẢO HIỂM ÁP DỤNG",
+                "list": {
+                    "1": "Công ty Bảo hiểm Bảo Việt",
+                    "2": "Tổng công ty Cổ phần Bảo Minh",
+                    "3": "Tổng công ty Bảo hiểm Dầu khí Việt Nam (PVI)",
+                    "4": "Bảo hiểm quân đội MIC",
+                    "5": "Công ty TNHH INSMART",
+                    "6": "Bảo hiểm Bưu điện (PTI)",
+                    "7": "Tổng Công ty Bảo hiểm BIDV (Bic)",
+                    "8": "Tổng Công ty Bảo hiểm toàn cầu (GIC)",
+                    "9": "Bảo hiểm viễn đông (VASS)",
+                    "10": "Bảo hiểm Liberty",
+                    "11": "Bảo hiểm PJICO",
+                    "12": "Bảo hiểm Pacific Cross",
+                    "13": "Công ty Bảo hiểm nhân thọ GENERALI",
+                    "14": "Công ty Bảo hiểm Nhân thọ DaiIchi",
+                    "15": "Bảo hiểm AIA",
+                    "16": "Bảo hiểm BAKCO",
+                    "17": "Bảo hiểm UIC's",
+                    "18": "Công ty Bảo hiểm VBI (ngân hàng Viettinbank)",
+                    "19": "Bảo hiểm JLT",
+                    "20": "Bảo hiểm ATACC",
+                    "21": "Bảo hiểm Marsh",
+                    "22": "Bảo hiểm AON Care",
+                    "23": "Bảo hiểm FTC",
+                    "24": "Bảo hiểm CarePlus",
+                    "25": "Bảo hiểm Gras Sayove",
+                    "26": "Bảo hiểm Nhân thọ Prudential"
+                }
+            }
+        },
+        "manage": {
+            "fullName": "Họ và tên",
+            "no": "STT",
+            "sex": "Giới tính",
+            "action": "Trạng thái",
+            "time": "Thời gian",
+            "address": "Địa chỉ",
+            "confirm": "Xác nhận",
+            "send-invoices": "Gửi hóa đơn",
+            "noData": "Không có dữ liệu",
+            "send": "Gửi",
+            "title": "Gửi hóa đơn khám bệnh thành công",
+            "patient-email": "Email bệnh nhân",
+            "prescription-file": "Chọn file đơn thuốc"
+        }
+    },
+    "booking-modal": {
+        "title": {
+            "Booking-information": "Thông tin đặt lịch khám bệnh",
+            "fullName": "Họ tên",
+            "phoneNumber": "Số điện thoại",
+            "emailAddress": "Địa chỉ Email",
+            "contactAddress": "Địa chỉ liên hệ",
+            "reason": "Lý do khám",
+            "birthDay": "Ngày sinh",
+            "gender": "Giới tính",
+            "confirm": "Xác nhận",
+            "cancel": "Hủy"
+        },
+        "profile-doctor": {
+            "free-booking": "Miễn phí đặt lịch",
+            "more-infor": "Xem thêm"
+        },
+        "progress": {
+            "Booking-progress": "Đang xử lý đặt lịch..."
+        }
+    },
+    "verify": {
+        "text": {
+            "success1": "Lịch hẹn của bạn đã được xác nhận.",
+            "success2": "Cảm ơn bạn đã tin tưởng BookingCare.",
+            "failed": "Lịch hẹn không tồn tại hoặc đã được xác nhận trước đó",
+            "loading": "Hệ thống đang gặp sự cố. Vui lòng thử lại sau."
+        }
+    },
+    "specialty": {
+        "manage-speciality": "Quản lý chuyên khoa",
+        "name-speciality": "Tên chuyên khoa",
+        "img-speciality": "Ảnh chuyên khoa",
+        "save": "Lưu thông tin",
+        "common-specialties": "Chuyên khoa phổ biến",
+        "more-infor": "Xem thêm",
+        "common": "Chuyên khoa phổ biến"
+    },
+    "handBook": {
+        "handbook": "Cẩm nang",
+        "moreInfor": "XEM THÊM",
+        "manage-handbook": "Quản lý cẩm nang",
+        "title-handbook": "Tiêu đề",
+        "img": "Ảnh ",
+        "save": "Lưu thông tin"
+    },
+    "remote": {
+        "text": "Chức năng này hiện không khả dụng. Vui lòng thử lại sau!"
+    },
+    "medical": {
+        "medical-facility": "Cơ sở y tế nổi bật"
+    },
+    "generalExamination": {
+        "general_Examination": "Khám tổng quát"
+    },
+    "remedyModal": {
+        "progress": {
+            "Booking-progress": "Đang xử lý..."
+        }
+    },
+    "chatbot": {
+        "chatbot.welcome": "Xin chào 👋, tôi là trợ lý y tế AI. Bạn muốn hỏi gì?",
+        "chatbot.suggestions": "Gợi ý câu hỏi:",
+        "chatbot.send": "Gửi",
+        "chatbot.placeholder": "Nhập tin nhắn...",
+        "chatbot.suggestion1": "Tôi nên khám sức khỏe định kỳ bao lâu một lần?",
+        "chatbot.suggestion2": "Triệu chứng sốt cao cần làm gì?",
+        "chatbot.suggestion3": "Người bị tiểu đường nên ăn uống thế nào?",
+        "chatbot.suggestion4": "Có cần tiêm phòng cúm mỗi năm không?",
+        "AI": "Trợ lý AI"
+    }
+}

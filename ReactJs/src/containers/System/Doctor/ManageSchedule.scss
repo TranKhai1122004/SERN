@@ -1,0 +1,95 @@
+/* 1. ẢNH NỀN TOÀN TRANG */
+.background-image-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../assets/images/1192125.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -9999;
+}
+
+/* 2. OVERLAY MỜ TRÊN ẢNH NỀN (giúp dễ đọc nội dung) */
+.background-image-layer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    /* lớp phủ trắng mờ */
+}
+
+
+
+
+
+
+
+.manage-schedule-container{
+    
+    background-color: transparent !important;
+    position: relative;
+    z-index: 1;
+
+    .m-s-title{
+        text-transform: uppercase;
+        margin-top: 15px;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        color: #0071ba;
+    }
+    .m-s-body .container{
+    background-color: rgba(255, 255, 255, 0.5);
+    /* trắng mờ */
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1;
+    position: relative;
+    }
+
+    .pick-hour-container{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .btn-schedule{
+            appearance: none;
+            background: #f0f4fa;
+            border: 1px solid #c3d0ee;
+            border-radius: 0.5rem;
+            padding: 0.4rem 0.9rem;
+            font-size: 1.45rem;
+            cursor: pointer;
+            min-width: 120px;
+            transition: background .2s ease, transform .1s ease, box-shadow .2s ease;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            color: #1f3d8f;
+            font-weight: 500;
+            
+            &:hover {
+                background: #e2e9fc;
+                transform: translateY(-1px);
+            }
+
+            &.active{
+            background-color: #FFB347 ;
+            }
+        }
+    }
+    .btn-save-schedule{
+        margin-top: 15px;
+
+       
+    }
+}
+
+

@@ -1,0 +1,92 @@
+.examination-container {
+  background: #f5f7fa;
+  color: #222;
+
+  .content-up {
+    position: relative;
+    background-image: url('../../../assets/detail.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    margin-bottom: 30px;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 1;
+    }
+  }
+
+  .text {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .examination-down {
+    padding: 20px 120px;
+
+    .examination-down-body {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 25px;
+
+      .each-examination {
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        cursor: pointer;
+
+        &:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .dt-content-left {
+          width: 100%;
+          .content-specialty-up {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 220px;
+          }
+        }
+
+        .dt-content-right {
+          flex: 1;
+          padding: 18px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+            text-align: center;
+          }
+
+          p, div {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+}

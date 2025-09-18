@@ -1,0 +1,14 @@
+.section-medical-facility{
+    .section-container{
+        .section-body{
+            .clinic-name{
+                font-size: 17px;
+                font-weight: bold;
+                cursor: pointer;
+                 &:hover{
+                    color: #28a745;
+                }
+            }
+        }
+    }
+}
