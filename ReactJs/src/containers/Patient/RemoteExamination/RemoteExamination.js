@@ -32,11 +32,11 @@ class RemoteExamination extends Component {
                 <HomeHeader />
                 <div className='remote-examination-body'>
                     <div className='remote-examination-content'>
-                        <div className='text'><FormattedMessage id = "remote.text"/></div>
-                        
+                        <div className='text'><FormattedMessage id="remote.text" /></div>
+
                     </div>
                 </div>
-                <HomeFooter/>
+                <HomeFooter />
             </div>
         );
     }

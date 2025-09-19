@@ -3,7 +3,7 @@
   bottom: 50px;
   right: 20px;
   width: 100px;
-  height: 100px;
+  height: 80px;
   cursor: pointer;
   z-index: 10001;
   
@@ -12,6 +12,7 @@
     height: 100%;
     object-fit: contain;
     transition: transform 0.3s ease;
+    
   }
 
   &.animate img {
@@ -21,13 +22,13 @@
     position: absolute;    
     text-align: center;
     margin-top: 5px;
-    margin-left: 45px;
+    margin-left: 53px;
     transform: translateX(-50%); 
     background: linear-gradient(135deg, #4facfe, #00f2fe);
     color: #fff;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
-    padding: 5px 8px;
+    padding: 5px 5px;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     cursor: pointer;
@@ -43,12 +44,12 @@
 }
 
 .chatbot-container {
-  z-index: 10000;
+  z-index: 100000;
   position: fixed;
-  bottom: 100px;
-  right: 24px;
+  bottom: 130px;
+  right: 20px;
   width: 380px;
-  height: 520px;
+  height: 500px;
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 16px;

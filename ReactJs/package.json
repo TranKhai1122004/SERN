@@ -13,6 +13,7 @@
     "buffer": "^6.0.3",
     "connected-react-router": "^6.9.1",
     "cors": "^2.8.5",
+    "fuse.js": "^7.1.0",
     "lodash": "^4.17.21",
     "markdown-it": "^12.3.2",
     "moment": "^2.30.1",
