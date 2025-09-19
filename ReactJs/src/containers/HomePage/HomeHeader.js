@@ -7,13 +7,16 @@ import { LANGUAGES } from "../../utils";
 import { changeLanguageApp } from '../../store/actions/appActions';
 import { withRouter } from 'react-router';
 import Chatbot from '../../components/ChatBot/ChatBot';
-import { getDetailSpecialtyByName } from '../../services/userService';
+import { getAllSpecialty } from '../../services/userService';
+import Fuse from 'fuse.js';
+import { toast } from 'react-toastify';
 
 class HomeHeader extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            keyword: ''
+            keyword: '',
+            specialties: []
         }
     }
     changeLanguage = (language) => {
@@ -24,22 +27,41 @@ class HomeHeader extends Component {
             this.props.history.push(`/home`);
         }
     }
-
-    handleSearch = async () => {
-        if (!this.state.keyword) return;
-        let res = await getDetailSpecialtyByName(this.state.keyword.toLowerCase().trim());
-        if (res && res.errCode === 0 && res.data) {
-            let specialtyId = res.data.id;
-            this.props.history.push(`/detail-specialty/${specialtyId}`);
-        } else {
-            alert("❌ Không tìm thấy chuyên khoa");
+    async componentDidMount() {
+        let res = await getAllSpecialty();
+        if (res && res.errCode === 0) {
+            this.setState({ specialties: res.data });
         }
 
     }
+    handleSearch = () => {
+        if (!this.state.keyword) return;
+
+        const { specialties, keyword } = this.state;
+
+
+        const options = {
+            includeScore: true,
+            threshold: 0.3,
+            keys: ["nameVi"]
+        };
+
+        const fuse = new Fuse(specialties, options);
+        const results = fuse.search(keyword);
+
+        if (results.length > 0) {
+            let specialtyId = results[0].item.id;
+            this.props.history.push(`/detail-specialty/${specialtyId}`);
+        } else {
+            toast.error("❌ Không tìm thấy chuyên khoa");
+        }
+        this.setState({ keyword: '' });
+    }
+
 
     render() {
         let language = this.props.language;
-
+        console.log(this.state.specialties)
         return (
             <React.Fragment>
                 <div className='home-header-container'>

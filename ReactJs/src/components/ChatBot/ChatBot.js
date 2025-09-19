@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { injectIntl, FormattedMessage } from "react-intl";
 import { postChatbotMessage } from "../../services/userService";
 import "./Chatbot.scss";
+import chatbotIcon from "../../assets/images/151956-chatboticon.png";
 
 class Chatbot extends Component {
   constructor(props) {
@@ -35,7 +36,7 @@ class Chatbot extends Component {
   componentDidMount() {
     this.interval = setInterval(() => {
       this.setState((prev) => ({ animate: !prev.animate }));
-    }, 2000);
+    }, 1400);
   }
 
   componentWillUnmount() {
@@ -100,7 +101,7 @@ class Chatbot extends Component {
           onClick={() => this.setState({ isOpen: !isOpen })}
         >
           <img
-            src="/images/pngtree-smart-chatbot-cartoon-clipart-png-image_9015126.png"
+            src={chatbotIcon}
             alt="Chatbot"
           />
           <div className="content-chatbot"><FormattedMessage id="chatbot.AI" /></div>

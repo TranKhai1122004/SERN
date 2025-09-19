@@ -67,10 +67,10 @@ class App extends Component {
                                     <Route path={path.GENERAL_EXAMINATION} component={generalExamination} />
                                     <Route path={path.REMOTE_EXAMINATION} component={RemoteExamination} />
                                     <Route path={path.DETAIL_CLINIC} component={DetailClinic} />
-                                    
 
-                                    
-                                    
+
+
+
 
 
                                 </Switch>
@@ -95,6 +95,7 @@ class App extends Component {
                             pauseOnFocusLoss
                             draggable
                             pauseOnHover
+                            style={{ zIndex: 999999 }}
                         />
                     </div>
                 </ConnectedRouter>

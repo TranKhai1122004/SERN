@@ -1,6 +1,6 @@
 .remote-examination-container{
     .remote-examination-body{
-         background-image: url('../../../assets/background-y-te_034617740.jpg');
+         background-image: url('../../../assets/images/background-y-te_034617740.jpg');
             width: 100%;
             height: 100%;
             background-repeat: no-repeat;
@@ -11,16 +11,16 @@
         .remote-examination-content{
             .text{
                 display: flex;
-                justify-content: center;   /* căn giữa ngang */
-                align-items: center;       /* căn giữa dọc */
-                height: 100vh;             /* chiếm toàn bộ chiều cao màn hình */
-                text-align: center;        /* căn giữa chữ nếu nhiều dòng */
+                justify-content: center;  
+                align-items: center;       
+                height: 100vh;             
+                text-align: center;       
                 font-size: 40px;     
                 
-                border: 2px solid rgba(0, 0, 0, 0.3);   /* viền mờ */
-                background: rgba(255, 252, 252, 0.151);   /* nền mờ trắng */
-                backdrop-filter: blur(4px);             /* làm mờ nền phía sau (glass effect) */
-                -webkit-backdrop-filter: blur(6px);     /* support Safari */
+                border: 2px solid rgba(0, 0, 0, 0.3);   
+                background: rgba(255, 252, 252, 0.151);   
+                backdrop-filter: blur(4px);            
+                -webkit-backdrop-filter: blur(6px);     
       
                 
             }
