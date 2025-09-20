@@ -7,6 +7,7 @@ import specialtyController from "../controllers/specialtyController";
 import handBookController from "../controllers/handBookController";
 import clinicController from "../controllers/clinicController";
 import chatbotController from "../controllers/chatbotController";
+import pingController from "../controllers/pingController";
 let router = express.Router();
 let initWebRoutes = (app) => {
     //homeController
@@ -54,6 +55,8 @@ let initWebRoutes = (app) => {
     router.get('/api/get-detail-clinic-by-id', clinicController.getDetailClinicById);
     //chatbotController
     router.post('/api/chatbot', chatbotController.handleChatbotMessage);
+    //route ping
+    router.get("/ping", pingController.handlePing);
 
     return app.use("/", router);
 };
