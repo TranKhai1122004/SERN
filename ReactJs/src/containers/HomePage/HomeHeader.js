@@ -10,13 +10,16 @@ import Chatbot from '../../components/ChatBot/ChatBot';
 import { getAllSpecialty } from '../../services/userService';
 import Fuse from 'fuse.js';
 import { toast } from 'react-toastify';
-
+import SupportModal from '../System/Doctor/Modal/SupportModal';
 class HomeHeader extends Component {
     constructor(props) {
         super(props);
         this.state = {
             keyword: '',
-            specialties: []
+            specialties: [],
+            isOpenHome: false,
+            isOpenModalSupport: false
+
         }
     }
     changeLanguage = (language) => {
@@ -57,18 +60,43 @@ class HomeHeader extends Component {
         }
         this.setState({ keyword: '' });
     }
-
-
+    handleOpenDiv = () => {
+        this.setState(prevState => ({
+            isOpenHome: !prevState.isOpenHome
+        }));
+    }
+    handleClickSupport = () => {
+        this.setState({
+            isOpenModalSupport: true
+        })
+    }
+    closeSupportModal = () => {
+        this.setState({
+            isOpenModalSupport: false
+        })
+    }
     render() {
         let language = this.props.language;
         console.log(this.state.specialties)
+        let { isOpenHome, isOpenModalSupport } = this.state;
         return (
             <React.Fragment>
                 <div className='home-header-container'>
                     <div className='home-header-content'>
                         <div className='left-content'>
-                            <i className="fas fa-bars"></i>
-                            <img className='header-logo' src={logo} onClick={() => this.returnToHome()} />
+                            {!isOpenHome ?
+                                <>
+                                    <i className="fas fa-bars" onClick={() => this.handleOpenDiv()}></i>
+                                    <img className='header-logo' src={logo} onClick={() => this.returnToHome()} />
+                                </>
+                                :
+                                <>
+                                    <button className='comeHome' onClick={() => this.props.history.push('/home')}>Trang chủ</button>
+                                    <i className="fas fa-bars" onClick={() => this.handleOpenDiv()}></i>
+                                    <img className='header-logo' src={logo} onClick={() => this.returnToHome()} />
+                                </>
+                            }
+
                         </div>
                         <div className='center-content'>
                             <div className='child-content'>
@@ -89,7 +117,7 @@ class HomeHeader extends Component {
                             </div>
                         </div>
                         <div className='right-content'>
-                            <div className='support'><i className='fas fa-question-circle'></i><FormattedMessage id="homeheader.support" /></div>
+                            <div className='support' onClick={ () => this.handleClickSupport()}><i className='fas fa-question-circle'></i><FormattedMessage id="homeheader.support" /></div>
                             <div className={language === LANGUAGES.VI ? 'language-vi active' : 'language-vi'}>
                                 <span onClick={() => { this.changeLanguage(LANGUAGES.VI) }}>VN</span>
                             </div>
@@ -149,7 +177,11 @@ class HomeHeader extends Component {
                         </div>
                     </div>
                 }
-                <Chatbot />
+                 <SupportModal
+                                    isOpenModalSupport={isOpenModalSupport}
+                                    closeSupportModal={this. closeSupportModal}
+                />         
+                <Chatbot/>
             </React.Fragment>
         );
     }
