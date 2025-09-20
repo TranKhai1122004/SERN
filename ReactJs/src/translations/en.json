@@ -224,5 +224,8 @@
         "chatbot.suggestion3": "What should people with diabetes eat?",
         "chatbot.suggestion4": "Do I need a flu shot every year?",
         "AI": "AI assistant"
+    },
+    "modal": {
+        "support": "Contact Support"
     }
 }

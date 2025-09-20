@@ -224,5 +224,8 @@
         "chatbot.suggestion3": "Người bị tiểu đường nên ăn uống thế nào?",
         "chatbot.suggestion4": "Có cần tiêm phòng cúm mỗi năm không?",
         "AI": "Trợ lý AI"
+    },
+    "modal": {
+        "support": "Liên hệ hỗ trợ"
     }
 }

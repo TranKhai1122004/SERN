@@ -8,7 +8,7 @@ import { LANGUAGES } from '../../../utils';
 import DoctorSchedule from './DoctorSchedule';
 import DoctorExtraInfor from './DoctorExtraInfor';
 import LikeAndShare from '../SocialPlugin/LikeAndShare';
-import Comment from '../SocialPlugin/Comment';
+
 class DetailDoctor extends Component {
 
     constructor(props) {
@@ -108,12 +108,7 @@ class DetailDoctor extends Component {
                         )}
                     </div>
 
-                    <div className='comment-doctor'>
-                        <Comment
-                            dataHref={currentURL}
-                            width={"100%"}
-                        />
-                    </div>
+                        
 
                 </div>
                 <HomeFooter />
