@@ -6,7 +6,8 @@ import { Modal } from 'reactstrap';
 import _ from 'lodash';
 import { toast } from "react-toastify";
 import moment from 'moment';
-import LoadingOverlay from 'react-loading-overlay-ts';
+import LoadingOverlay from 'react-loading-overlay';
+
 import { CommonUtils } from '../../../utils';
 class RemedyModal extends Component {
 

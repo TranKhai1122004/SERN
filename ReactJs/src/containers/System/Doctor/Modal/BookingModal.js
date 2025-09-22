@@ -12,7 +12,8 @@ import Select from 'react-select';
 import { postPatientBookAppointment } from '../../../../services/userService';
 import { toast } from "react-toastify";
 import moment from 'moment';
-import LoadingOverlay from 'react-loading-overlay-ts';
+import LoadingOverlay from 'react-loading-overlay';
+
 class BookingModal extends Component {
 
     constructor(props) {
