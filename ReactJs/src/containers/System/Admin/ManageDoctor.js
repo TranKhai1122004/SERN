@@ -9,10 +9,10 @@ import MdEditor from 'react-markdown-editor-lite';
 // import style manually
 import 'react-markdown-editor-lite/lib/index.css';
 import Select from 'react-select';
-import { every, has } from 'lodash';
+
 import { CRUD_ACTIONS, LANGUAGES } from '../../../utils';
 import { getDetaiInforDoctor } from '../../../services/userService';
-import { useIntl } from 'react-intl';
+
 import TurndownService from 'turndown';
 
 // Register plugins if required
