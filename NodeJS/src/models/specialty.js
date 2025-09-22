@@ -27,6 +27,8 @@ module.exports = (sequelize, DataTypes) => {
     }, {
         sequelize,
         modelName: 'Specialty',
+        tableName: 'specialties',   // ép đúng tên bảng
+        freezeTableName: true
     });
     return Specialty;
 };

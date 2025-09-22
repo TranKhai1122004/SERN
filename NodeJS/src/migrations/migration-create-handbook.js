@@ -22,9 +22,9 @@ module.exports = {
             },
 
             image: {
-                type: Sequelize.BLOB('long'),
+                type: Sequelize.TEXT,  
             },
-            
+
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE

@@ -11,25 +11,27 @@ module.exports = (sequelize, DataTypes) => {
          */
         static associate(models) {
             // define association here
-            Markdown.belongsTo(models.User, {foreignKey: 'doctorId'})
+            Markdown.belongsTo(models.User, { foreignKey: 'doctorId' })
         }
     }
     Markdown.init({
         contentHTML: DataTypes.TEXT('long'),
         contentMarkdown: DataTypes.TEXT('long'),
-        description:DataTypes.TEXT('long'),
+        description: DataTypes.TEXT('long'),
         doctorId: DataTypes.INTEGER,
-        specialtyId:DataTypes.INTEGER,
+        specialtyId: DataTypes.INTEGER,
         clinicId: DataTypes.INTEGER,
         contentHTMLEn: DataTypes.TEXT('long'),
-        descriptionEn:DataTypes.TEXT('long'),
+        descriptionEn: DataTypes.TEXT('long'),
         //contentHTMLEn
         //descriptionEn
 
     }, {
         sequelize,
         modelName: 'Markdown',
+        tableName: 'markdowns',
+        freezeTableName: true
     });
-    
+
     return Markdown;
 };

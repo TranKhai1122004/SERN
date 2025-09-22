@@ -26,7 +26,9 @@ module.exports = (sequelize, DataTypes) => {
     valueVi: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'ALLcode', // Tên model
+    modelName: 'ALLcode',
+    tableName: 'allcodes',
+    freezeTableName: true  // Tên model
   });
 
   return ALLcode; // Trả về class ALLcode thay vì User hoặc ALLcode chưa định nghĩa

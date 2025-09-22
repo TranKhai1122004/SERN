@@ -38,7 +38,7 @@ module.exports = {
             },
 
             image: {
-                type: Sequelize.BLOB('long'),
+                type: Sequelize.TEXT,  // không dùng BLOB
             },
             createdAt: {
                 allowNull: false,
