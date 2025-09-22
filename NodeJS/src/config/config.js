@@ -8,25 +8,29 @@ const commonConfig = {
   port: process.env.DB_PORT,
   dialect: process.env.DB_DIALECT,
   define: {
-    freezeTableName: true
+    freezeTableName: true,
   },
-  dialectOptions: process.env.DB_SSL === 'true' ? {
-    ssl: {
-      require: true,
-      rejectUnauthorized: false
-    }
-  } : {},
-  timezone: "+07:00"
+  dialectOptions:
+    process.env.DB_SSL === 'true'
+      ? {
+        ssl: {
+          require: true,
+          rejectUnauthorized: false,
+        },
+        family: 4, // ép dùng IPv4
+      }
+      : { family: 4 },
+  timezone: '+07:00',
 };
 
 module.exports = {
   development: commonConfig,
+  production: commonConfig,
   test: {
-    username: "root",
+    username: 'root',
     password: null,
-    database: "database_test",
-    host: "127.0.0.1",
-    dialect: "mysql"
+    database: 'database_test',
+    host: '127.0.0.1',
+    dialect: 'mysql',
   },
-  production: commonConfig
 };
