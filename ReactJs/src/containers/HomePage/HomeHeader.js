@@ -91,7 +91,7 @@ class HomeHeader extends Component {
                                 </>
                                 :
                                 <>
-                                    <button className='comeHome' onClick={() => this.props.history.push('/home')}>Trang chủ</button>
+                                    <button className='comeHome' onClick={() => this.props.history.push('/home')}><FormattedMessage id="homeheader.home" /></button>
                                     <i className="fas fa-bars" onClick={() => this.handleOpenDiv()}></i>
                                     <img className='header-logo' src={logo} onClick={() => this.returnToHome()} />
                                 </>
@@ -117,7 +117,7 @@ class HomeHeader extends Component {
                             </div>
                         </div>
                         <div className='right-content'>
-                            <div className='support' onClick={ () => this.handleClickSupport()}><i className='fas fa-question-circle'></i><FormattedMessage id="homeheader.support" /></div>
+                            <div className='support' onClick={() => this.handleClickSupport()}><i className='fas fa-question-circle'></i><FormattedMessage id="homeheader.support" /></div>
                             <div className={language === LANGUAGES.VI ? 'language-vi active' : 'language-vi'}>
                                 <span onClick={() => { this.changeLanguage(LANGUAGES.VI) }}>VN</span>
                             </div>
@@ -177,11 +177,11 @@ class HomeHeader extends Component {
                         </div>
                     </div>
                 }
-                 <SupportModal
-                                    isOpenModalSupport={isOpenModalSupport}
-                                    closeSupportModal={this. closeSupportModal}
-                />         
-                <Chatbot/>
+                <SupportModal
+                    isOpenModalSupport={isOpenModalSupport}
+                    closeSupportModal={this.closeSupportModal}
+                />
+                <Chatbot />
             </React.Fragment>
         );
     }

@@ -10,7 +10,8 @@
         "check-health": "General health check",
         "support": "Support",
         "welcome": "Welcome, ",
-        "find-speciality": "Search for a specialty"
+        "find-speciality": "Search for a specialty",
+        "home": "Homepage"
     },
     "banner": {
         "title1": "MEDICAL PLATFORM",
