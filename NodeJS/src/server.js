@@ -3,33 +3,20 @@ import bodyParser from "body-parser";
 import viewEngine from "./config/viewEngine";
 import connectDB from "./config/connectDB";
 import initWebRoutes from "./route/web";
-import cors from 'cors';
-require("dotenv").config(); // dùng để chạy câu lệnh let port ở dưới 
+import cors from "cors";
+require("dotenv").config();
+
 let app = express();
 
+// ✅ Chỉ giữ cors() thôi
 app.use(cors({
-    origin: [
-        
-        'https://trankhai-serm.vercel.app'
-    ],
+    origin: process.env.URL_REACT,  // "https://trankhai-sern.vercel.app"
     credentials: true
 }));
 
-app.use(function (req, res, next) {
-    res.setHeader("Access-Control-Allow-Origin", process.env.URL_REACT);
+app.use(bodyParser.json({ limit: "50mb" }));
+app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 
-    res.setHeader('Access-Control-Allow-methods', 'Get, Post, OPTIONS, PUT, PATCH, DELETE');
-
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-with,content-type');
-
-    res.setHeader('Access-Control-Allow-Credentials', true);
-
-    next();
-});
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json({ limit: '50mb' }));
-app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 // Khởi tạo view engine và route
 viewEngine(app);
 initWebRoutes(app);
