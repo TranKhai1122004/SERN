@@ -1,7 +1,7 @@
 import axios from '../axios';
 axios.defaults.withCredentials = true;
 const handleLoginApi = (email, password) => {
-    return axios.post(`${process.env.REACT_APP_API_URL}/api/login`, {
+    return axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/login`, {
         email: email,
         password: password
     });
