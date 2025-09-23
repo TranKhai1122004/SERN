@@ -91,7 +91,7 @@ class HomeHeader extends Component {
                                 </>
                                 :
                                 <>
-                                    <button className='comeHome' onClick={() => this.props.history.push('/home')}><FormattedMessage id="homeheader.home" /></button>
+                                    <span className='fas fa-home comeHome' onClick={() => this.props.history.push('/home')}></span>
                                     <i className="fas fa-bars" onClick={() => this.handleOpenDiv()}></i>
                                     <img className='header-logo' src={logo} onClick={() => this.returnToHome()} />
                                 </>

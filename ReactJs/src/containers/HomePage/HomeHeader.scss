@@ -17,29 +17,31 @@
             display: flex;
             align-items: center;
 
-            .comeHome{
+           .comeHome {
                 position: absolute;
-                border: none;
-                outline: none;
-                white-space: nowrap; 
-                height: 70px;
-                width: 120px;
                 left: 0;
-                background-color: rgb(214, 255, 242) !important;;    
-                // color: #fff;
-                font-size: 15px;            
-                font-weight: bold;            
-                letter-spacing: 0.5px;       
+                height: 100%;
+                width: 120px;
 
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
+                background-color: rgba(239, 255, 250, 1); 
+                border: none;
+                 
                 cursor: pointer;
-                &:hover {
-                    background-color: #4A90E2; // trùng với màu header khi hover
-                    transform: translateY(-2px);
-                }
                 
+                font-size: 24px; 
+                color: gray;
+                transition: all 0.3s ease;
+            }
+
+            .comeHome:hover {
+                    background-color: #6ea8e6;
+                    color: #fff; 
+                    transform: translateY(-3px) scale(1.05);
+                    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
             }
             .header-logo {
                 height: 100%;

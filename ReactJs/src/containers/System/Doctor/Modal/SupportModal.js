@@ -33,7 +33,7 @@ class SupportModal extends Component {
             >
                 <div className="support-modal-content">
                     <div className="support-modal-header">
-                        <span className="left"><FormattedMessage id="modal.support"/></span>
+                        <span className="left"><FormattedMessage id="modal.support" /></span>
                         <span
                             className="right"
                             onClick={() => closeSupportModal()}
@@ -44,11 +44,11 @@ class SupportModal extends Component {
                     <div className="support-modal-body">
                         <div className="info-item phone">
                             <i className="fas fa-phone-alt"></i>
-                            024-7301-2468
+                            038-914-8680
                         </div>
                         <div className="info-item email">
                             <i className="fas fa-envelope"></i>
-                            support@bookingcare.vn
+                            trankhai112204@gmail.com
                         </div>
                     </div>
                 </div>
