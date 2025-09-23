@@ -109,6 +109,12 @@ class Chatbot extends Component {
 
         {isOpen && (
           <div className="chatbot-container">
+            <button
+              className="chatbot-close"
+              onClick={() => this.setState({ isOpen: false })}
+            >
+              ×
+            </button>
             <div className="chatbot-messages">
               {messages.map((msg, i) => (
                 <div
