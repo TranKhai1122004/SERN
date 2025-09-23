@@ -1,7 +1,7 @@
 import axios from '../axios';
 axios.defaults.withCredentials = true;
 const handleLoginApi = (email, password) => {
-    return axios.post('http://localhost:8080/api/login', {
+    return axios.post(`${process.env.REACT_APP_API_URL}/api/login`, {
         email: email,
         password: password
     });
@@ -11,7 +11,7 @@ const getAllUsers = (inputId) => {
     return axios.get(`/api/get-all-users?id=${inputId}`);
 }
 const createNewUserService = (data) => {
-    
+
     return axios.post('/api/create-new-user', data);
 }
 
@@ -77,7 +77,7 @@ const getAllSpecialty = () => {
 const getDetailSpecialtyById = (data) => {
     return axios.get(`/api/get-detail-specialty-by-id?id=${data.id}&location=${data.location}`)
 }
-const getDetailSpecialtyByName=(data)=>{
+const getDetailSpecialtyByName = (data) => {
     return axios.get(`/api/get-detail-specialty-by-name?nameVi=${data}`)
 }
 const getAllHandBook = () => {
