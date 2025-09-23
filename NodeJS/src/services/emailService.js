@@ -180,7 +180,7 @@ let sendAttachment = (dataSend) => {
                 attachments: [
                     {
                         filename: `remedy-${dataSend.patientName}.${ext}`,  // remedy-NguyenVanA.png/jpg/pdf
-                        content: dataSend.imgBase64.split("base64,")[1],   
+                        content: dataSend.imgBase64.split("base64,")[1],
                         encoding: "base64",
                         contentType: mimeType
 
