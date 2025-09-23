@@ -10,11 +10,8 @@ let app = express();
 
 // ✅ Chỉ giữ cors() thôi
 app.use(cors({
-
-    origin: [
-        "http://localhost:3000",
-        "https://trankhai-sern.vercel.app"
-    ],
+    
+    origin: process.env.URL_REACT,  // "https://trankhai-sern.vercel.app"
     credentials: true
 }));
 
