@@ -84,7 +84,7 @@ class HomeHeader extends Component {
                 <div className='home-header-container'>
                     <div className='home-header-content'>
                         <div className='left-content'>
-                            {!isOpenHome ?
+                            {/* {!isOpenHome ?
                                 <>
                                     <i className="fas fa-bars" onClick={() => this.handleOpenDiv()}></i>
                                     <img className='header-logo' src={logo} onClick={() => this.returnToHome()} />
@@ -95,8 +95,10 @@ class HomeHeader extends Component {
                                     <i className="fas fa-bars" onClick={() => this.handleOpenDiv()}></i>
                                     <img className='header-logo' src={logo} onClick={() => this.returnToHome()} />
                                 </>
-                            }
+                            } */}
 
+                            <span className="fas fa-home comeHome" onClick={() => this.props.history.push('/home')}></span>
+                            <img className='header-logo' src={logo} onClick={() => this.returnToHome()} />
                         </div>
                         <div className='center-content'>
                             <div className='child-content'>

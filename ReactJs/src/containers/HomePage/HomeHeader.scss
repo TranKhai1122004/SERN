@@ -16,46 +16,26 @@
             width: 20%;
             display: flex;
             align-items: center;
-
-           .comeHome {
-                position: absolute;
-                left: 0;
-                height: 100%;
-                width: 120px;
-
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                background-color: rgba(239, 255, 250, 1); 
-                border: none;
-                 
-                cursor: pointer;
-                
-                font-size: 24px; 
-                color: gray;
-                transition: all 0.3s ease;
-            }
-
-            .comeHome:hover {
-                    background-color: #6ea8e6;
-                    color: #fff; 
-                    transform: translateY(-3px) scale(1.05);
-                    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-            }
+       
             .header-logo {
                 height: 100%;
                 width: 100%;
                 cursor: pointer;
                 transform: scale(0.5, 0.5);
-                margin-left: -45px;
+                margin-left: -45px;            
             }
 
-            i {
-                font-size: 25px;
+            .comeHome {
+                border-radius: 10%;
+                font-size: 33px;
                 color: gray;
                 cursor: pointer;
                 margin-left: 90px;
+                &:hover{                 
+                    transform: translateY(-3px) scale(1.05);
+                    box-shadow: 0 6px 12px rgba(239, 255, 250, 1);
+                    
+                }
             }
         }
 
