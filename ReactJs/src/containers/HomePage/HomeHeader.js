@@ -157,8 +157,8 @@ class HomeHeader extends Component {
                                     <div className='icon-child'><i className='fas fa-mobile-alt'></i></div>
                                     <div className='text-child'><FormattedMessage id="banner.child2" /></div>
                                 </div>
-                                <div className='options-child' onClick={() => this.props.history.push('/examination-general')}>
-                                    <div className='icon-child'><i className='fas fa-procedures'></i></div>
+                                <div className='options-child' onClick={() => this.props.history.push('/booking')}>
+                                    <div className='icon-child'><i className='fas fa-calendar-check'></i></div>
                                     <div className='text-child'><FormattedMessage id="banner.child3" /></div>
                                 </div>
                                 <div className='options-child' onClick={() => this.props.history.push('/detail-doctor/63')}>

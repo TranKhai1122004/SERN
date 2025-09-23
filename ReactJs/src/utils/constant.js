@@ -11,7 +11,7 @@ export const path = {
     REMOTE_EXAMINATION: '/remote-examination',
     VERIFY_EMAIL_BOOKING: '/verify-booking',
     DETAIL_CLINIC: '/detail-clinic/:id',
-    GENERAL_EXAMINATION: '/examination-general'
+    BOOKING: '/booking'
 
 };
 

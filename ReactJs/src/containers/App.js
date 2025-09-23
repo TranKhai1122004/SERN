@@ -22,7 +22,7 @@ import DetailSpecialty from './Patient/Specialty/DetailSpecialty';
 import ExaminationSpecialty from './Patient/Specialty/ExaminationSpecialty';
 import RemoteExamination from './Patient/RemoteExamination/RemoteExamination';
 import DetailClinic from './Patient/Clinic/DetailClinic';
-import generalExamination from './Patient/GeneralExamination/generalExamination';
+import booking from './Patient/GeneralExamination/booking';
 class App extends Component {
 
     handlePersistorState = () => {
@@ -64,7 +64,7 @@ class App extends Component {
                                     <Route path={path.VERIFY_EMAIL_BOOKING} component={VerifyEmail} />
                                     <Route path={path.DETAIL_HANDBOOK} component={DetailHandBook} />
                                     <Route path={path.EXAMINATION_SPECIALITS} component={ExaminationSpecialty} />
-                                    <Route path={path.GENERAL_EXAMINATION} component={generalExamination} />
+                                    <Route path={path.BOOKING} component={booking} />
                                     <Route path={path.REMOTE_EXAMINATION} component={RemoteExamination} />
                                     <Route path={path.DETAIL_CLINIC} component={DetailClinic} />
 
