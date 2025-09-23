@@ -63,8 +63,8 @@
 
   .chatbot-close {
     position: absolute;
-    top: 10px;       /* cách trên một chút */
-    right: 10px;     /* sát bên phải */
+    top: 10px;       
+    right: 10px;     
     background: transparent;
     border: none;
     font-size: 30px;
@@ -75,8 +75,8 @@
     transition: transform 0.3s ease, color 0.3s ease;
     z-index: 111;
     &:hover {
-    color: rgb(0, 60, 255);               // đổi sang màu đỏ
-    transform: rotate(90deg); // xoay 90 độ
+    color: rgb(0, 60, 255);              
+    transform: rotate(90deg); 
   }
     
   }
