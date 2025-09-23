@@ -68,14 +68,15 @@
     background: transparent;
     border: none;
     font-size: 30px;
-    color: #ee1414;
+    color: rgb(0, 60, 255);
+    
     cursor: pointer;
     transition: 0.2s;
     line-height: 1;
     transition: transform 0.3s ease, color 0.3s ease;
     z-index: 111;
     &:hover {
-    color: rgb(0, 60, 255);              
+    color: #ee1414;              
     transform: rotate(90deg); 
   }
     
