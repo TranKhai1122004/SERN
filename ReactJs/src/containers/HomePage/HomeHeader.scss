@@ -17,17 +17,19 @@
             display: flex;
             align-items: center;
        
-            .header-logo {
-                height: 100%;
-                width: 100%;
-                cursor: pointer;
-                transform: scale(0.5, 0.5);
-                margin-left: -45px;           
-                transition: transform 0.3s ease;
-                &:hover{                 
-                transform: translateY(-3px) scale(1.05);    
-                } 
+        .header-logo {
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            transform: scale(0.5);              
+            margin-left: -45px;           
+            transition: transform 0.3s ease;
+            &:hover {                 
+            transform: translateY(-3px) scale(0.55);  
             }
+        }
+
+        
 
             .comeHome {
                 border-radius: 10%;
