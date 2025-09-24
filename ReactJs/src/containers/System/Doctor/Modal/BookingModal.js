@@ -13,6 +13,7 @@ import { postPatientBookAppointment } from '../../../../services/userService';
 import { toast } from "react-toastify";
 import moment from 'moment';
 import LoadingOverlay from 'react-loading-overlay';
+import { vi, enUS } from "date-fns/locale";
 
 class BookingModal extends Component {
 
@@ -289,6 +290,7 @@ class BookingModal extends Component {
                                         onChange={this.handleOnChangeDatePicker}
                                         className="datepicker form-control"
                                         value={this.state.birthDay}
+                                        language={this.props.language} 
                                     />
                                 </div>
                                 <div className='col-6 form-group'>

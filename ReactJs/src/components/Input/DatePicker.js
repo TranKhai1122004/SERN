@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import Flatpickr from 'react-flatpickr';
 import moment from 'moment';
-
+import "flatpickr/dist/flatpickr.min.css";
 import { KeyCodeUtils } from "../../utils";
 import './DatePicker.scss';
+import { Vietnamese } from "flatpickr/dist/l10n/vn.js";
+import { English } from "flatpickr/dist/l10n/default.js";
 
 // const CustomInput = ({ value, defaultValue, inputRef, onInputChange, onInputBlur, ...props }) => {
 //     return <input {...props} className='custom-form-control custom-date-input' defaultValue={defaultValue} ref={inputRef}
@@ -138,13 +140,15 @@ class DatePicker extends Component {
     DISPLAY_FORMAT = "d/m/Y";
 
     render() {
-        const { value, onChange, minDate, onClose, ...otherProps } = this.props;
+        const { value, onChange, minDate, onClose, language, ...otherProps } = this.props;
         const options = {
             dateFormat: this.DISPLAY_FORMAT,
             allowInput: true,
             disableMobile: true,
             onClose: onClose,
-            onOpen: this.onOpen
+            onOpen: this.onOpen,
+            locale: language === 'vi' ? Vietnamese : English,
+
         };
         if (minDate) {
             options.minDate = minDate;
