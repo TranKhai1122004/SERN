@@ -43,6 +43,7 @@
     
     user-select: none;
     &.section-specialty {
+        
         background: #eeeeee;
         background-image: url("../../assets/images/140311-background5.png");
     }
@@ -82,7 +83,10 @@
             .bg-image {
 
                 &.section-specialty {
-                    
+                    transition: transform 0.3s ease;
+                    &:hover{                 
+                    transform: translateY(-3px) scale(1.05);    
+                    }
                     width: 278px;
                     height: 150px;
                     background-position: center center;
@@ -97,7 +101,10 @@
                 }
 
                 &.section-medical-facility {
-                    
+                    transition: transform 0.3s ease;
+                    &:hover{                 
+                    transform: translateY(-3px) scale(1.05);    
+                    } 
                     width: 278px;
                     height: 150px;
                     background-position: center center;
@@ -109,6 +116,10 @@
                     cursor: pointer;
                 }
                 &.section-outstanding-doctor {
+                    transition: transform 0.3s ease;
+                    &:hover{                 
+                    transform: translateY(-3px) scale(1.05);    
+                    }
                     width: 278px;
                     height: 150px;
                     margin: 0 auto;
@@ -131,7 +142,10 @@
                 }
 
                 &.section-handbook {
-                    
+                    transition: transform 0.3s ease;
+                    &:hover{                 
+                    transform: translateY(-3px) scale(1.05);    
+                    } 
                     width: 278px;
                     height: 150px;
                     background-position: center center;

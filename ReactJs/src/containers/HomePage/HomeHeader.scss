@@ -22,7 +22,11 @@
                 width: 100%;
                 cursor: pointer;
                 transform: scale(0.5, 0.5);
-                margin-left: -45px;            
+                margin-left: -45px;           
+                transition: transform 0.3s ease;
+                &:hover{                 
+                transform: translateY(-3px) scale(1.05);    
+                } 
             }
 
             .comeHome {
@@ -31,9 +35,10 @@
                 color: gray;
                 cursor: pointer;
                 margin-left: 90px;
+                transition: transform 0.3s ease;
                 &:hover{                 
                     transform: translateY(-3px) scale(1.05);
-                    box-shadow: 0 6px 12px rgba(239, 255, 250, 1);
+                   
                     
                 }
             }
@@ -172,10 +177,10 @@
         align-items: flex-end;
         justify-content: center;
         background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1));
-
+        
 
         .options {
-
+           
             text-align: center;
             display: flex;
             gap: 90px;
@@ -183,6 +188,10 @@
             margin-bottom: 10px;
             
             .options-child {
+                transition: transform 0.3s ease;
+                &:hover{                 
+                transform: translateY(-3px) scale(1.05);    
+                }
                 width: 100px;
                 cursor: pointer;
                 background: none;      
