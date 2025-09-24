@@ -54,7 +54,7 @@ class Specialty extends Component {
                 <div className='section-container'>
                     <div className='section-header'>
                         <span className='title-section'><FormattedMessage id="specialty.common-specialties" /></span>
-                        <button className='btn-section' onClick={() => this.props.history.push('/remote-examination')}><FormattedMessage id="specialty.more-infor" /></button>
+                        {/* <button className='btn-section' onClick={() => this.props.history.push('/remote-examination')}><FormattedMessage id="specialty.more-infor" /></button> */}
                     </div>
                     <div className='section-body'>
                         <Slider {...this.props.settings}>

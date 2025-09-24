@@ -55,7 +55,7 @@ class HandBook extends Component {
                 <div className='section-container'>
                     <div className='section-header'>
                         <span className='title-section'><FormattedMessage id="handBook.handbook" /></span>
-                        <button className='btn-section' onClick={() => this.props.history.push('/remote-examination')}><FormattedMessage id="handBook.RemoteExamination" /></button>
+                        {/* <button className='btn-section' onClick={() => this.props.history.push('/remote-examination')}><FormattedMessage id="handBook.RemoteExamination" /></button> */}
                     </div>
                     <div className='section-body'>
                         <div className='slick-slider'>
