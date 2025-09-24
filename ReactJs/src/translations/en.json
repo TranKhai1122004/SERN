@@ -228,5 +228,10 @@
     },
     "modal": {
         "support": "Contact Support"
+    },
+    "about": {
+        "typical": "Typical hospital in medical examination and treatment",
+        "text": "Established in May 1975, Military Hospital 175 is the final-line unit in the South of the Army. In addition to its role as a center for military medical research and a postgraduate training facility of the Ministry of National Defense, Military Hospital 175 is also a general and specialized hospital at the highest level, providing healthcare services for both the military and the people. The current highlight is the Institute of Orthopedics and Trauma, a comprehensive facility with high-level professional and technical expertise, meeting the treatment needs for trauma cases in the region. It is the only unit in Vietnam today equipped with a helicopter landing pad, making it a multi-functional emergency center by river, road, sea, and air, capable of handling emergencies in all situations—especially in maritime and island healthcare. At the same time, it also serves as a center for training, technology transfer, scientific research, and international cooperation.",
+        "videoTitle": "INTRODUCTORY FILM ABOUT MILITARY HOSPITAL 175"
     }
 }
