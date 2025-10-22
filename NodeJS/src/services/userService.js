@@ -63,7 +63,7 @@ let checkUserEmail = (userEmail) => {
     return new Promise(async (resolve, reject) => {
         try {
             let user = await db.User.findOne({
-                where: { email: userEmail } // tìm email nào bằng với email nhập vào
+                where: { email: userEmail }
             });
 
             if (user) {
@@ -153,9 +153,6 @@ let deleteUser = (userId) => {
                 errMessage: `The user isn't exist`
             })
         }
-        // if (founduser) {
-        //     await founduser.destroy();
-        // }
         await db.User.destroy({
             where: { id: userId }
         });

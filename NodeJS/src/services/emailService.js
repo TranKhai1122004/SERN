@@ -8,7 +8,7 @@ let sendSimpleEmail = async (dataSend) => {
     const msg = {
         to: dataSend.reciverEmail,
         from: {
-            email: "trankhai112204@gmail.com", // bạn có thể để email này, không cần verify DNS cho đồ án
+            email: "trankhai112204@gmail.com", 
             name: "BookingCare"
         },
         subject: dataSend.language === 'vi'
