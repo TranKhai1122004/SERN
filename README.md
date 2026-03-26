@@ -1,22 +1,22 @@
-# 🏥  Booking Care Website  
+# Booking Care Website  
 
 An online medical appointment booking website.  
 The frontend is built with **ReactJS + Redux**, and the backend uses **Node.js + Express** to manage specialties, doctors, and users.  
 
 ---
 
-## 🚀 Technologies Used  
+## Technologies Used  
 ### Frontend  
-- ⚛️ ReactJS  
-- 🔄 Redux (global state management)  
-- 🌐 Axios (API calls)  
-- 🌍 React-Intl (multi-language support)  
-- 🎨 SCSS (styling)  
+- ReactJS  
+- Redux (global state management)  
+- Axios (API calls)  
+- React-Intl (multi-language support)  
+- SCSS (styling)  
 
 ### Backend  
-- 🟢 Node.js  
-- 🚏 Express  
-- 💾 PostgreSQL  
+- Node.js  
+- Express  
+- PostgreSQL  
 
 ---
 
@@ -47,20 +47,20 @@ By default, the backend runs on `http://localhost:8080` and the frontend on `htt
 
 ---
 
-## ✨ Features  
-- 🔍 Search for specialties using **Fuse.js** (fuzzy search).  
-- 🌐 Multi-language support: Vietnamese / English.  
-- 👨‍⚕️ Manage doctor, specialty, and clinic information.  
-- 📅 Online appointment booking.  
-- 🤖 AI-powered chatbot for user support.  
-- 🔔 Notifications with **React-Toastify**.  
+## Features  
+- Search for specialties using **Fuse.js** (fuzzy search).  
+- Multi-language support: Vietnamese / English.  
+- Manage doctor, specialty, and clinic information.  
+- Online appointment booking.  
+- AI-powered chatbot for user support.  
+- Notifications with **React-Toastify**.  
 
 ---
 
-## 📸 Demo  
+## Demo  
 *(Add screenshots once the project is running)*  
 
 ---
 
-## 👤 Author  
+## Author  
 - **Trần Khải** – [GitHub](https://github.com/TranKhai1122004/SERN)  
