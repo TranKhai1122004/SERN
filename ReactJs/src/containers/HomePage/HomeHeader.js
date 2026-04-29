@@ -24,7 +24,7 @@ class HomeHeader extends Component {
     }
     changeLanguage = (language) => {
         this.props.changeLanguageAppRedux(language);
-    }   
+    }
     returnToHome = () => {
         if (this.props.history) {
             this.props.history.push(`/home`);
@@ -77,7 +77,7 @@ class HomeHeader extends Component {
     }
     render() {
         let language = this.props.language;
-        console.log(this.state.specialties)
+
         let { isOpenHome, isOpenModalSupport } = this.state;
         return (
             <React.Fragment>

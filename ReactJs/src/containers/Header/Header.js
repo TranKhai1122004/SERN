@@ -34,10 +34,15 @@ class Header extends Component {
         this.setState({
             menuApp: menu
         })
-        
+
     }
+    handleLogout = () => {
+        this.props.processLogout();
+        localStorage.removeItem('token'); // Xóa token để các request API sau này không mang theo token cũ
+    }
+
     render() {
-        const { processLogout, language, userInfo } = this.props;
+        const { language, userInfo } = this.props;
         return (
             <>
                 <div className="header-container">
@@ -56,7 +61,7 @@ class Header extends Component {
                             onClick={() => this.handleChangeLanguage(LANGUAGES.EN)}>EN</span>
 
                         {/* nút logout */}
-                        <div className="btn btn-logout" onClick={processLogout} title='Log out'>
+                        <div className="btn btn-logout" onClick={() => this.handleLogout()} title='Log out'>
                             <i className="fas fa-sign-out-alt"></i>
                         </div>
                     </div>

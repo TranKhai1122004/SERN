@@ -33,7 +33,7 @@ class Login extends Component {
         this.setState({ errMessage: '' });
         try {
             const data = await handleLoginApi(this.state.username, this.state.password);
-            
+
             if (data && data.errCode !== 0) {
                 this.setState({
                     errMessage: data.message
@@ -41,7 +41,9 @@ class Login extends Component {
             }
             if (data && data.errCode === 0) {
                 this.props.userLoginSuccess(data.user);
-                
+                localStorage.setItem('token', data.token); // Lưu token vào localStorage
+                localStorage.setItem('refreshToken', data.refreshToken);
+                console.log(data.token);
             }
 
         }

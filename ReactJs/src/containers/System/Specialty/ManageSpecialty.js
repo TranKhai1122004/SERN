@@ -92,7 +92,7 @@ class ManageSpecialty extends Component {
             console.log('trkhai check error: ', res);
         }
 
-        console.log("khai check state gửi lên: ", data);
+        
     };
     openPreviewImage = () => {
         if (!this.state.previewImgURL) return;

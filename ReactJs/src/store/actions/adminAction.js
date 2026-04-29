@@ -100,7 +100,7 @@ export const createNewUser = (data) => {
     return async (dispatch, getState) => {
         try {
             let res = await createNewUserService(data);
-            console.log("trankhai check create user redux: ", res);
+
             if (res && res.errCode === 0) {
                 toast.success("Create a new user succeed");
                 dispatch(saveUserSuccess());

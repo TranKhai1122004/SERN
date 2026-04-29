@@ -21,6 +21,7 @@ class UserManage extends Component {
     }
     getAllUsersFromReact = async () => {
         let response = await getAllUsers('ALL');
+
         if (response && response.errCode === 0) {
             this.setState({
                 arrUsers: response.users
@@ -65,7 +66,7 @@ class UserManage extends Component {
     }
 
     handlDeleteUser = async (user) => {
-        
+
         try {
             let res = await deleteUserService(user.id);
             if (res && res.errCode === 0) {
@@ -79,7 +80,7 @@ class UserManage extends Component {
     }
 
     handleEditUser = (user) => {
-        
+
         this.setState({
             isOpenModalEditUser: true,
             userEdit: user
@@ -102,7 +103,7 @@ class UserManage extends Component {
         }
     }
     render() {
-        
+
         let arrUsers = this.state.arrUsers;
         return (
             <div className="users-container">
