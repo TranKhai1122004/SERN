@@ -5,7 +5,7 @@ let handleLogin = async (req, res) => {
 
     if (!email || !password) {
         return res.status(500).json({
-            errCode: 1, //mã lỗi khi lỗi = 1 còn k lỗi sẽ bằng 0
+            errCode: 1,
             message: 'Missing inputs parameter'
         });
     }
@@ -13,7 +13,9 @@ let handleLogin = async (req, res) => {
     return res.status(200).json({
         errCode: userData.errCode,
         message: userData.errMessage,
-        user: userData.user ? userData.user : {}
+        user: userData.user ? userData.user : {},
+        token: userData.token ? userData.token : '',
+        refreshToken: userData.refreshToken ? userData.refreshToken : ''
     });
 
 
@@ -29,7 +31,6 @@ let handleGetAllUsers = async (req, res) => {
         })
     }
     let users = await userService.getAllUsers(id);
-    console.log(users);
     return res.status(200).json({
         errCode: 0,
         errMessage: 'OK',
@@ -63,12 +64,11 @@ let handleEditUser = async (req, res) => {
 
 let getAllCode = async (req, res) => {
     try {
-        setTimeout(async () => {
-            let typeInput = req.query.type || req.body.type || req.params.type;
-            let data = await userService.getAllCodeService(typeInput);
-            console.log(data);
-            return res.status(200).json(data);
-        }, 3000)
+
+        let typeInput = req.query.type || req.body.type || req.params.type;
+        let data = await userService.getAllCodeService(typeInput);
+        return res.status(200).json(data);
+
 
     }
     catch (e) {
@@ -79,11 +79,23 @@ let getAllCode = async (req, res) => {
         });
     }
 }
+
+let handleRefreshToken = async (req, res) => {
+    let refreshToken = req.body.refreshToken;
+    if (!refreshToken) {
+        return res.status(403).json({ errCode: 1, message: 'Refresh Token is required' });
+    }
+    let data = await userService.refreshTokenService(refreshToken);
+    console.log("Refresh token data: ", data);
+    return res.status(200).json(data);
+};
+
 module.exports = {
     handleLogin: handleLogin,
     handleGetAllUsers: handleGetAllUsers,
     handleCreateNewUser: handleCreateNewUser,
     handleEditUser: handleEditUser,
     handleDeleteUser: handleDeleteUser,
-    getAllCode: getAllCode
+    getAllCode: getAllCode,
+    handleRefreshToken: handleRefreshToken
 }

@@ -41,7 +41,7 @@ let postBookAppointment = (data) => {
                         firstName: data.fullName
                     },
                 });
-                console.log("Trankhai check user: ", user[0])
+                
                 //create a booking record
                 if (user && user[0]) {
 

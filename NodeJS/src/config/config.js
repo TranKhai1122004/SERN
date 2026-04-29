@@ -17,7 +17,7 @@ const commonConfig = {
           require: true,
           rejectUnauthorized: false,
         },
-        family: 4, // ép dùng IPv4
+        family: 4, 
       }
       : { family: 4 },
   timezone: '+07:00',
