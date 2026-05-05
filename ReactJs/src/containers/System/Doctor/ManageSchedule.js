@@ -5,7 +5,7 @@ import { FormattedMessage } from 'react-intl';
 import './ManageSchedule.scss';
 import Select from 'react-select';
 import * as actions from "../../../store/actions";
-import { CRUD_ACTIONS, LANGUAGES, dateFormat } from '../../../utils';
+import { CRUD_ACTIONS, LANGUAGES, dateFormat, USER_ROLES } from '../../../utils';
 import DatePicker from '../../../components/Input/DatePicker';
 import moment from 'moment';
 import { toast } from "react-toastify";
@@ -18,7 +18,7 @@ class ManageSchedule extends Component {
 
         this.state = {
             listDoctors: [],
-            selectedDoctor: {},
+            selectedDoctor: null,
             currentDate: null,
             rangeTime: [],
         }
@@ -30,13 +30,23 @@ class ManageSchedule extends Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        if (prevProps.allDoctors !== this.props.allDoctors) {
-            let dataSelect = this.buildDataInputSelect(this.props.allDoctors)
+        if (prevProps.allDoctors !== this.props.allDoctors || prevProps.language !== this.props.language) {
+            let dataSelect = this.buildDataInputSelect(this.props.allDoctors);
+            let { userInfo } = this.props;
+            let selectedDoctor = this.state.selectedDoctor;
+
+            if (userInfo && userInfo.roleId === USER_ROLES.DOCTOR) {
+                selectedDoctor = dataSelect.find(item => item.value === userInfo.id);
+                console.log('check userInfo: ', userInfo);
+            } else if (prevProps.allDoctors !== this.props.allDoctors) {
+                selectedDoctor = null;
+            } else if (prevProps.language !== this.props.language && selectedDoctor) {
+                selectedDoctor = dataSelect.find(item => item.value === selectedDoctor.value);
+            }
+
             this.setState({
                 listDoctors: dataSelect,
-                selectedDoctor: null,
-                description: '',
-                editorKey: Date.now()
+                selectedDoctor: selectedDoctor,
             })
         }
         if (prevProps.allScheduleTime !== this.props.allScheduleTime) {
@@ -123,13 +133,13 @@ class ManageSchedule extends Component {
             doctorId: selectedDoctor.value,
             formatedDate: formatedDate
         });
-       
-        
+
+
     }
     render() {
         let { rangeTime } = this.state;
-        let { language } = this.props;
-        let yesterday = new Date(new Date().setDate(new Date().getDate()-1));
+        let { language, userInfo } = this.props;
+        let yesterday = new Date(new Date().setDate(new Date().getDate() - 1));
         return (
             <>
                 <div className="background-image-layer">
@@ -153,7 +163,7 @@ class ManageSchedule extends Component {
                                             menuPortal: base => ({ ...base, zIndex: 9999 }),
                                         }}
                                         classNamePrefix="custom-select"
-
+                                        isDisabled={userInfo && userInfo.roleId === USER_ROLES.DOCTOR}
                                     />
                                 </div>
                                 <div className='col-6 form-group'>
@@ -202,7 +212,8 @@ const mapStateToProps = state => {
         isLoggedIn: state.user.isLoggedIn,
         language: state.app.language,
         allDoctors: state.admin.allDoctors,
-        allScheduleTime: state.admin.allScheduleTime
+        allScheduleTime: state.admin.allScheduleTime,
+        userInfo: state.user.userInfo
     };
 };
 
