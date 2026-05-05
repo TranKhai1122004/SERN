@@ -40,10 +40,16 @@ class Login extends Component {
                 });
             }
             if (data && data.errCode === 0) {
-                this.props.userLoginSuccess(data.user);
-                localStorage.setItem('token', data.token); // Lưu token vào localStorage
-                localStorage.setItem('refreshToken', data.refreshToken);
-                console.log(data.token);
+                // this.props.userLoginSuccess(data.user);
+                // localStorage.setItem('token', data.token); // Lưu token vào localStorage
+                // console.log(data.token);
+
+                // Lưu cả user và token vào Redux (Memory)
+                this.props.userLoginSuccess({
+                    ...data.user,
+                    token: data.token
+                });
+
             }
 
         }
