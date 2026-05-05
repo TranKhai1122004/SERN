@@ -10,15 +10,23 @@ let handleLogin = async (req, res) => {
         });
     }
     let userData = await userService.handleUserLogin(email, password);
+    const isProduction = process.env.NODE_ENV === 'production';
+    if (userData && userData.refreshToken) {
+        // Lưu Refresh Token vào Cookie
+        res.cookie('refreshToken', userData.refreshToken, {
+            httpOnly: true, // Ngăn chặn JavaScript truy cập (chống XSS)
+            secure: isProduction, // Chỉ gửi qua HTTPS khi ở production
+            sameSite: isProduction ? 'None' : 'Lax', // Chống CSRF
+            maxAge: 7 * 24 * 60 * 60 * 1000 // 7 ngày
+        });
+    }
+
     return res.status(200).json({
         errCode: userData.errCode,
         message: userData.errMessage,
         user: userData.user ? userData.user : {},
-        token: userData.token ? userData.token : '',
-        refreshToken: userData.refreshToken ? userData.refreshToken : ''
+        token: userData.token ? userData.token : ''
     });
-
-
 }
 let handleGetAllUsers = async (req, res) => {
     let id = req.query.id; // nếu truyền type là all thì lấy tất cả các ng dùng, còn single chỉ lấy theo người dùng
@@ -81,7 +89,7 @@ let getAllCode = async (req, res) => {
 }
 
 let handleRefreshToken = async (req, res) => {
-    let refreshToken = req.body.refreshToken;
+    let refreshToken = req.cookies.refreshToken;
     if (!refreshToken) {
         return res.status(403).json({ errCode: 1, message: 'Refresh Token is required' });
     }

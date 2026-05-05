@@ -4,6 +4,7 @@ import viewEngine from "./config/viewEngine";
 import connectDB from "./config/connectDB";
 import initWebRoutes from "./route/web";
 import cors from "cors";
+import cookieParser from 'cookie-parser';
 require("dotenv").config();
 
 let app = express();
@@ -15,6 +16,7 @@ app.use(cors({
     credentials: true
 }));
 
+app.use(cookieParser());
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 

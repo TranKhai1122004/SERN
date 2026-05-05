@@ -30,14 +30,14 @@ let handleUserLogin = async (email, password) => {
                 if (check) {
                     userData.errCode = 0;
                     userData.errMessage = 'Ok';
-                    let token = jwt.sign(
+                    let token = jwt.sign(  // đây là token đầu tiên được tạo ra sau khi người dùng đăng nhập thành công
                         { id: user.id, roleId: user.roleId },
-                        process.env.JWT_SECRET || 'your_secret_key',
-                        { expiresIn: '30m' }
+                        process.env.JWT_SECRET,
+                        { expiresIn: '30m' } //30m
                     );
                     let refreshToken = jwt.sign(
                         { id: user.id },
-                        process.env.JWT_REFRESH_SECRET || 'your_refresh_secret',
+                        process.env.JWT_REFRESH_SECRET,
                         { expiresIn: '7d' }
                     );
 
@@ -215,17 +215,17 @@ let getAllCodeService = async (typeInput) => {
 
 let refreshTokenService = async (refreshToken) => {
     try {
-        const decoded = jwt.verify(refreshToken, process.env.JWT_REFRESH_SECRET || 'your_refresh_secret');
+        const decoded = jwt.verify(refreshToken, process.env.JWT_REFRESH_SECRET);
         let user = await db.User.findOne({
             where: { id: decoded.id },
             raw: true
         });
         if (!user) return { errCode: 2, errMessage: 'User not found' };
 
-        let accessToken = jwt.sign(
+        let accessToken = jwt.sign( // đây là token mới được tạo ra khi người dùng sử dụng refresh token để lấy access token mới
             { id: user.id, roleId: user.roleId },
-            process.env.JWT_SECRET || 'your_secret_key',
-            { expiresIn: '30m' }
+            process.env.JWT_SECRET,
+            { expiresIn: '30m' } //30m
         );
         return { errCode: 0, accessToken };
     } catch (e) {
