@@ -222,6 +222,7 @@ let bulkCreateSchedule = (data) => {
                     errMessage: "Missing required parameter!"
                 })
             } else {
+                console.log("check data: ", data);
                 let schedule = data.arrSchedule;
                 if (schedule && schedule.length > 0) {
                     schedule = schedule.map(item => {

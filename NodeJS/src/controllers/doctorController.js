@@ -57,6 +57,15 @@ let getDetailDotorById = async (req, res) => {
 }
 let bulkCreateSchedule = async (req, res) => {
     try {
+        // Kiểm tra phân quyền: Nếu là bác sĩ (R2), chỉ cho phép tạo lịch cho chính mình
+        if (req.user && req.user.roleId === 'R2') {
+            if (+req.body.doctorId !== +req.user.id) {
+                return res.status(403).json({
+                    errCode: 1,
+                    errMessage: "Bạn không có quyền tạo kế hoạch khám cho bác sĩ khác!"
+                });
+            }
+        }
         let infor = await doctorService.bulkCreateSchedule(req.body);
         return res.status(200).json(infor)
     } catch (e) {
@@ -105,6 +114,15 @@ let getProfileDoctorById = async (req, res) => {
 }
 let getListPatientForDoctor = async (req, res) => {
     try {
+        // Kiểm tra phân quyền: Bác sĩ chỉ xem được danh sách bệnh nhân của mình
+        if (req.user && req.user.roleId === 'R2') {
+            if (+req.query.doctorId !== +req.user.id) {
+                return res.status(403).json({
+                    errCode: 1,
+                    errMessage: "Bạn không có quyền truy cập danh sách bệnh nhân của người khác!"
+                });
+            }
+        }
         let infor = await doctorService.getListPatientForDoctor(req.query.doctorId, req.query.date);
         return res.status(200).json(infor)
     } catch (e) {
@@ -118,6 +136,15 @@ let getListPatientForDoctor = async (req, res) => {
 
 let sendRemedy = async (req, res) => {
     try {
+        // Kiểm tra phân quyền: Bác sĩ chỉ được gửi hóa đơn cho bệnh nhân của mình
+        if (req.user && req.user.roleId === 'R2') {
+            if (+req.body.doctorId !== +req.user.id) {
+                return res.status(403).json({
+                    errCode: 1,
+                    errMessage: "Bạn không có quyền thực hiện hành động này cho bác sĩ khác!"
+                });
+            }
+        }
         let infor = await doctorService.sendRemedy(req.body);
         return res.status(200).json(infor)
     } catch (e) {
