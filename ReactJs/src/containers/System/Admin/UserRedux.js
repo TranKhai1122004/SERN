@@ -203,7 +203,7 @@ class UserRedux extends Component {
                 </div>
                 <div className='user-redux-container'>
                     <div className='title'>
-                        Learn Redux TrKhai
+                        Quản lý người dùng
                     </div>
 
                     <div className="user-redux-body" >

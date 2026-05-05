@@ -75,7 +75,7 @@
     },
     "admin": {
         "manage-doctor": {
-            "title": " Tạo thêm thông tin doctor",
+            "title": " Tạo thêm thông tin bác sĩ",
             "select-doctor": "Chọn bác sĩ",
             "select-speciality": "Chọn chuyên khoa",
             "select-clinic": "Chọn phòng khám",

@@ -22,8 +22,11 @@ class Header extends Component {
     componentDidMount = () => {
         let { userInfo } = this.props;
         let menu = [];
+        // phân quyền hiển thị menu theo role của user
         if (userInfo && !_.isEmpty(userInfo)) {
             let role = userInfo.roleId;
+            console.log('check user role: ', role);
+            console.log("check userInfo: ", userInfo)
             if (role === USER_ROLES.ADMIN) {
                 menu = adminMenu;
             }
@@ -38,7 +41,6 @@ class Header extends Component {
     }
     handleLogout = () => {
         this.props.processLogout();
-        localStorage.removeItem('token'); // Xóa token để các request API sau này không mang theo token cũ
     }
 
     render() {
