@@ -63,7 +63,7 @@ let sendAttachment = async (dataSend) => {
     const msg = {
         to: dataSend.email,
         from: {
-            email: "trankhai112204@gmail.com",
+            email: "trankhai1122004@gmail.com",
             name: "BookingCare"
         },
         subject: dataSend.language === 'vi'
