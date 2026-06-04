@@ -8,7 +8,7 @@ let sendSimpleEmail = async (dataSend) => {
     const msg = {
         to: dataSend.reciverEmail,
         from: {
-            email: "trankhai112204@gmail.com", 
+            email: "trankhai1122004@gmail.com",
             name: "BookingCare"
         },
         subject: dataSend.language === 'vi'
