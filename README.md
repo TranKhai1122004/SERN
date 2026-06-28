@@ -15,9 +15,13 @@ The frontend is built with **ReactJS + Redux**, and the backend uses **Node.js +
 
 ## 🔐 Demo Accounts
 
-| Role   |       Email      | Password     |
-| Admin  | admin@gmail.com  | Loveghita89@ |
-| Doctor | doctor@gmail.com | Loveghita89@ |
+Admin:
+    User: admin@gmail.com
+    Password: Loveghita89@
+Doctor:
+    User: doctor@gmail.com
+    Password: Loveghita89@
+
 
 > **Note:** These accounts are provided for demonstration purposes only.
 
