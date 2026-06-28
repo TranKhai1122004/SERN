@@ -1,66 +1,110 @@
-# Booking Care Website  
+# Booking Care Website
 
-An online medical appointment booking website.  
-The frontend is built with **ReactJS + Redux**, and the backend uses **Node.js + Express** to manage specialties, doctors, and users.  
-
----
-
-## Technologies Used  
-### Frontend  
-- ReactJS  
-- Redux (global state management)  
-- Axios (API calls)  
-- React-Intl (multi-language support)  
-- SCSS (styling)  
-
-### Backend  
-- Node.js  
-- Express  
-- PostgreSQL  
+An online medical appointment booking website.
+The frontend is built with **ReactJS + Redux**, and the backend uses **Node.js + Express** to manage specialties, doctors, schedules, and users.
 
 ---
 
-## ⚙️ Installation & Run  
+## 🔗 Live Demo
 
-### 1. Clone the project  
+🌐 **Home:** https://trankhai-sern.vercel.app/home
+
+🩺 **Doctor Dashboard:** https://trankhai-sern.vercel.app/doctor/manage-schedule
+
+---
+
+## 🔐 Demo Accounts
+
+| Role   |       Email      | Password     |
+| Admin  | admin@gmail.com  | Loveghita89@ |
+| Doctor | doctor@gmail.com | Loveghita89@ |
+
+> **Note:** These accounts are provided for demonstration purposes only.
+
+---
+
+## 🚀 Technologies Used
+
+### Frontend
+- ReactJS
+- Redux (Global State Management)
+- Axios
+- React-Intl
+- SCSS
+- React-Toastify
+
+### Backend
+- Node.js
+- Express.js
+- PostgreSQL
+- JWT Authentication
+- Refresh Token Authentication
+- RESTful API
+- SendGrid
+
+---
+
+## ✨ Features
+
+- User authentication with **JWT** and **Refresh Token**.
+- Search specialties using **Fuse.js** (fuzzy search).
+- Multi-language support (Vietnamese / English).
+- Doctor schedule management.
+- Appointment booking system.
+- CRUD management for users, doctors, specialties, and clinics.
+- Email notifications using **SendGrid**.
+- AI-powered chatbot for user support.
+- Responsive user interface.
+
+---
+
+## ⚙️ Installation & Run
+
+### 1. Clone the repository
+
 ```bash
-git clone https://github.com/username/medical-booking.git
-cd medical-booking
+git clone https://github.com/TranKhai1122004/SERN.git
+cd SERN
 ```
 
-### 2. Install dependencies  
-#### Frontend  
+### 2. Install Frontend
+
 ```bash
 cd frontend
 npm install
 npm start
 ```
 
-#### Backend  
+Runs at:
+
+```
+http://localhost:3000
+```
+
+### 3. Install Backend
+
 ```bash
 cd backend
 npm install
 npm start
 ```
 
-By default, the backend runs on `http://localhost:8080` and the frontend on `http://localhost:3000`.  
+Runs at:
+
+```
+http://localhost:8080
+```
 
 ---
 
-## Features  
-- Search for specialties using **Fuse.js** (fuzzy search).  
-- Multi-language support: Vietnamese / English.  
-- Manage doctor, specialty, and clinic information.  
-- Online appointment booking.  
-- AI-powered chatbot for user support.  
-- Notifications with **React-Toastify**.  
+## 📸 Screenshots
+
+> Add screenshots or GIFs here to showcase the application.
 
 ---
 
-## Demo  
-*(Add screenshots once the project is running)*  
+## 👨‍💻 Author
 
----
+**Trần Khải**
 
-## Author  
-- **Trần Khải** – [GitHub](https://github.com/TranKhai1122004/SERN)  
+- GitHub: https://github.com/TranKhai1122004/SERN

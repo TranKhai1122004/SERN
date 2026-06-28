@@ -215,7 +215,7 @@ class BookingModal extends Component {
 
         return (
             <>
-                {/* Overlay hiển thị khi isLoading = true */}
+                
                 {this.state.isLoading && (
                     <div className="custom-overlay">
                         <div className="spinner"></div>
