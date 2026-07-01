@@ -215,7 +215,7 @@ class BookingModal extends Component {
 
         return (
             <>
-                
+
                 {this.state.isLoading && (
                     <div className="custom-overlay">
                         <div className="spinner"></div>
@@ -290,7 +290,7 @@ class BookingModal extends Component {
                                         onChange={this.handleOnChangeDatePicker}
                                         className="datepicker form-control"
                                         value={this.state.birthDay}
-                                        language={this.props.language} 
+                                        language={this.props.language}
                                     />
                                 </div>
                                 <div className='col-6 form-group'>

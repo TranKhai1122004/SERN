@@ -32,7 +32,7 @@ class HomeFooter extends Component {
                 <div className='home-footer-body'>
                     <p>&copy; <FormattedMessage id="homepage.footer" />
                         <a target='blank' href='https://github.com/TranKhai1122004'>
-                            &#8594;  Click here &#8592;</a> </p>
+                            Trần Khải.</a> </p>
                 </div>
             </div>
 
