@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
 
         contentHTMLVi: DataTypes.TEXT('long'),
         contentMarkdownVi: DataTypes.TEXT('long'),
-
+        
         contentHTMLEn: DataTypes.TEXT('long'),
         contentMarkdownEn: DataTypes.TEXT('long'),
 

@@ -60,7 +60,7 @@ class Login extends Component {
         let adminInfo = {
             "tlid": "0",
             "tlfullname": "Administratorr",
-            "custype": "A",
+                "custype": "A",
             "accessToken": "eyJhbGciOiJIU"
         }
 
